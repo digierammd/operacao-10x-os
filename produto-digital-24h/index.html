@@ -1,1 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crie seu Primeiro Produto Digital em 24 Horas com IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0A0A;
+    --bg-card:#141414;
+    --bg-card-2:#1A1A1A;
+    --line:#262626;
+    --lime:#C8FF00;
+    --blue:#00D4FF;
+    --text:#EDEDED;
+    --text-dim:#8A8A8A;
+    --text-dimmer:#5A5A5A;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .display{font-family:'Big Shoulders Display',sans-serif;font-weight:800;letter-spacing:-0.01em;text-transform:uppercase;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
 
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,10,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .logo{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:0.02em;}
+  .logo span{color:var(--lime);}
+  .nav-cta{
+    background:var(--lime);color:#0A0A0A;font-weight:700;font-size:13px;
+    padding:10px 20px;border-radius:4px;text-decoration:none;
+    font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:80px 0 60px;position:relative;overflow:hidden;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--lime);
+    border:1px solid rgba(200,255,0,0.3);background:rgba(200,255,0,0.06);
+    padding:6px 14px;border-radius:100px;margin-bottom:28px;letter-spacing:0.04em;
+  }
+  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);}
+  h1{
+    font-size:clamp(40px,6.2vw,76px);
+    line-height:0.96;
+    margin-bottom:24px;
+    max-width:880px;
+  }
+  h1 .accent{color:var(--lime);}
+  .subhead{
+    font-size:19px;color:var(--text-dim);max-width:600px;margin-bottom:40px;line-height:1.6;
+  }
+  .hero-ctas{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:56px;}
+  .btn-primary{
+    background:var(--lime);color:#0A0A0A;font-weight:700;font-size:16px;
+    padding:18px 36px;border-radius:6px;text-decoration:none;display:inline-block;
+    transition:transform 0.15s ease;
+  }
+  .btn-primary:hover{transform:translateY(-2px);}
+  .price-tag{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--text-dim);}
+  .price-tag b{color:var(--text);font-size:18px;}
+
+  /* hour blocks signature */
+  .hours-strip{display:flex;gap:3px;margin-bottom:8px;}
+  .hour-block{
+    height:28px;flex:1;background:var(--bg-card-2);border-radius:2px;position:relative;overflow:hidden;
+  }
+  .hour-block.lit{background:var(--lime);}
+  .hours-label{
+    display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;
+    font-size:11px;color:var(--text-dimmer);margin-bottom:48px;letter-spacing:0.03em;
+  }
+
+  /* ---------- problem ---------- */
+  .section{padding:72px 0;border-top:1px solid var(--line);}
+  .section-label{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);
+    letter-spacing:0.08em;margin-bottom:16px;text-transform:uppercase;
+  }
+  h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:20px;max-width:680px;line-height:1.05;}
+  .lead{font-size:17px;color:var(--text-dim);max-width:620px;margin-bottom:8px;}
+
+  .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:40px;border-radius:8px;overflow:hidden;}
+  .problem-item{background:var(--bg);padding:28px 24px;}
+  .problem-item .num{font-family:'IBM Plex Mono',monospace;color:var(--text-dimmer);font-size:12px;margin-bottom:12px;}
+  .problem-item p{font-size:15px;color:var(--text-dim);line-height:1.55;}
+  .problem-item strong{color:var(--text);display:block;margin-bottom:6px;font-size:16px;}
+
+  /* ---------- mechanism / clock signature ---------- */
+  .mechanism{padding:72px 0;border-top:1px solid var(--line);}
+  .clock-row{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;
+  }
+  .clock-card{
+    background:var(--bg-card);border:1px solid var(--line);border-radius:10px;padding:28px 22px;
+    position:relative;
+  }
+  .clock-card .hour-range{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--lime);margin-bottom:18px;
+    display:block;
+  }
+  .clock-card h3{font-size:19px;margin-bottom:10px;font-weight:700;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;}
+  .clock-card p{font-size:14px;color:var(--text-dim);line-height:1.55;}
+  .clock-bar{height:4px;background:var(--bg-card-2);border-radius:4px;margin-top:20px;overflow:hidden;}
+  .clock-bar i{display:block;height:100%;background:var(--lime);}
+
+  /* ---------- offer / value stack ---------- */
+  .offer{padding:80px 0;border-top:1px solid var(--line);background:var(--bg-card);}
+  .offer-box{
+    max-width:640px;margin:0 auto;background:var(--bg);border:1px solid var(--line);border-radius:14px;
+    padding:48px;
+  }
+  .offer-box h2{text-align:center;margin:0 auto 8px;font-size:30px;}
+  .offer-sub{text-align:center;color:var(--text-dim);font-size:15px;margin-bottom:36px;}
+  .stack-list{list-style:none;margin-bottom:32px;}
+  .stack-list li{
+    display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);
+  }
+  .stack-list li:last-child{border-bottom:none;}
+  .check{
+    width:20px;height:20px;border-radius:50%;background:rgba(200,255,0,0.12);color:var(--lime);
+    display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:2px;font-weight:700;
+  }
+  .stack-list span{font-size:15px;color:var(--text);}
+  .stack-list small{display:block;color:var(--text-dim);font-size:13px;margin-top:2px;}
+
+  .price-block{text-align:center;padding-top:8px;}
+  .price-old{font-family:'IBM Plex Mono',monospace;color:var(--text-dimmer);text-decoration:line-through;font-size:16px;}
+  .price-new{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:56px;color:var(--lime);line-height:1;margin:6px 0 4px;}
+  .price-installment{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text-dim);margin-bottom:28px;}
+  .btn-offer{
+    display:block;width:100%;text-align:center;background:var(--lime);color:#0A0A0A;
+    font-weight:700;font-size:17px;padding:20px;border-radius:8px;text-decoration:none;margin-bottom:16px;
+  }
+  .guarantee{
+    display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:var(--text-dim);
+    font-family:'IBM Plex Mono',monospace;
+  }
+
+  /* ---------- cross-sell ---------- */
+  .cross-card{
+    margin-top:40px;background:var(--bg-card);border:1px solid var(--line);border-radius:12px;
+    padding:32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  }
+  .cross-card-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blue);letter-spacing:0.06em;display:block;margin-bottom:8px;}
+  .cross-card-text h3{font-size:21px;margin-bottom:8px;font-weight:700;}
+  .cross-card-text p{font-size:14px;color:var(--text-dim);max-width:480px;line-height:1.55;}
+  .cross-card-link{
+    background:transparent;border:1px solid var(--blue);color:var(--blue);font-family:'IBM Plex Mono',monospace;
+    font-size:13px;font-weight:600;padding:14px 24px;border-radius:6px;text-decoration:none;white-space:nowrap;
+  }
+
+  /* ---------- faq ---------- */
+  .faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
+  .faq-item summary{font-size:17px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+";font-family:'IBM Plex Mono',monospace;color:var(--blue);font-size:20px;}
+  .faq-item[open] summary::after{content:"−";}
+  .faq-item p{margin-top:14px;color:var(--text-dim);font-size:15px;line-height:1.6;max-width:680px;}
+
+  /* ---------- final cta ---------- */
+  .final-cta{padding:90px 0;text-align:center;border-top:1px solid var(--line);}
+  .final-cta h2{margin:0 auto 16px;max-width:600px;text-align:center;}
+  .final-cta .lead{margin:0 auto 36px;text-align:center;}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;}
+  footer p{font-size:13px;color:var(--text-dimmer);font-family:'IBM Plex Mono',monospace;}
+
+  @media (max-width:760px){
+    .problem-grid{grid-template-columns:1fr;}
+    .clock-row{grid-template-columns:1fr 1fr;}
+    .offer-box{padding:32px 24px;}
+  }
+  @media (max-width:520px){
+    .clock-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">OPERAÇÃO <span>10X</span></div>
+    <a href="https://pay.kiwify.com.br/C7gM1Tp" class="nav-cta">QUERO COMEÇAR</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">PRODUTO DIGITAL EM 24 HORAS · COM IA</div>
+    <h1>Saia da ideia parada<br>e chegue ao <span class="accent">produto pronto<br>para vender</span> em 24h.</h1>
+    <p class="subhead">Use ferramentas de IA gratuitas para validar, criar, precificar e publicar seu primeiro produto digital — mesmo sem experiência e sem gastar nada.</p>
+
+    <div class="hours-strip" aria-hidden="true">
+      <div class="hour-block lit" style="flex:6"></div>
+      <div class="hour-block lit" style="flex:8"></div>
+      <div class="hour-block lit" style="flex:10"></div>
+    </div>
+    <div class="hours-label">
+      <span>VALIDAÇÃO + CRIAÇÃO + PUBLICAÇÃO</span>
+      <span>24H</span>
+    </div>
+
+    <div class="hero-ctas">
+      <a href="https://pay.kiwify.com.br/C7gM1Tp" class="btn-primary">Quero meu produto em 24h →</a>
+      <span class="price-tag">a partir de <b>R$ 47</b> · acesso imediato</span>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">O PROBLEMA</div>
+    <h2>Você não trava por falta de ideia. Trava por não saber por onde começar.</h2>
+    <p class="lead">A maioria nunca lança porque tenta resolver tudo de uma vez: nicho, formato, copy, preço, página. O resultado é zero produto publicado.</p>
+
+    <div class="problem-grid">
+      <div class="problem-item">
+        <div class="num">01</div>
+        <strong>Ideia sem validação</strong>
+        <p>Você cria algo achando que vai vender, sem checar se existe demanda real antes de gastar tempo.</p>
+      </div>
+      <div class="problem-item">
+        <div class="num">02</div>
+        <strong>Perfeccionismo paralisante</strong>
+        <p>Fica meses ajustando um produto que nunca fica "pronto o suficiente" para ser publicado.</p>
+      </div>
+      <div class="problem-item">
+        <div class="num">03</div>
+        <strong>Zero processo</strong>
+        <p>Sem um caminho claro, cada etapa vira uma decisão nova — e decisão demais trava ação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mechanism">
+  <div class="wrap">
+    <div class="section-label">O MÉTODO</div>
+    <h2>4 blocos. 24 horas. Um produto publicado no final.</h2>
+    <p class="lead">Um processo sequencial — você não decide o que fazer, só executa o próximo bloco.</p>
+
+    <div class="clock-row">
+      <div class="clock-card">
+        <span class="hour-range">H0 — H6</span>
+        <h3>Validação</h3>
+        <p>Descubra se a ideia tem demanda real antes de criar qualquer coisa, usando prompts de pesquisa com IA.</p>
+        <div class="clock-bar"><i style="width:25%"></i></div>
+      </div>
+      <div class="clock-card">
+        <span class="hour-range">H6 — H16</span>
+        <h3>Criação</h3>
+        <p>Estruture o conteúdo do produto com IA gratuita, do esqueleto ao material final pronto para entrega.</p>
+        <div class="clock-bar"><i style="width:67%"></i></div>
+      </div>
+      <div class="clock-card">
+        <span class="hour-range">H16 — H20</span>
+        <h3>Preço</h3>
+        <p>Defina o valor certo com base em referência de mercado, não em achismo.</p>
+        <div class="clock-bar"><i style="width:83%"></i></div>
+      </div>
+      <div class="clock-card">
+        <span class="hour-range">H20 — H24</span>
+        <h3>Página de vendas</h3>
+        <p>Publique a página que converte visita em compra, pronta para receber tráfego.</p>
+        <div class="clock-bar"><i style="width:100%"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offer">
+  <div class="wrap">
+    <div class="offer-box">
+      <h2>O que você recebe</h2>
+      <p class="offer-sub">Framework Produto em 24H — Operação 10X</p>
+
+      <ul class="stack-list">
+        <li>
+          <span class="check">✓</span>
+          <span>Framework completo de validação<small>Descubra se vale a pena criar antes de investir tempo</small></span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Processo de criação guiado por IA<small>Prompts prontos para estruturar o produto do zero</small></span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Método de precificação<small>Como definir o preço sem chutar</small></span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Estrutura de página de vendas<small>Modelo pronto para adaptar ao seu produto</small></span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Acesso imediato após a compra<small>Material em PDF, comece agora</small></span>
+        </li>
+      </ul>
+
+      <div class="price-block">
+        <div class="price-old mono">de R$ 97</div>
+        <div class="price-new">R$ 47</div>
+        <div class="price-installment">ou em até 12x no cartão</div>
+        <a href="https://pay.kiwify.com.br/C7gM1Tp" class="btn-offer">Quero criar meu produto agora →</a>
+        <div class="guarantee">🔒 Garantia incondicional de 7 dias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">DEPOIS DO PRODUTO PRONTO</div>
+    <h2>Criar é o primeiro passo. Lançar é o que gera venda.</h2>
+    <p class="lead">Com o produto pronto em mãos, o próximo gargalo é colocar ele no mercado sem enrolar. Esse é o trabalho do Kit Lançamento em 7 Dias.</p>
+
+    <div class="cross-card">
+      <div class="cross-card-text">
+        <span class="cross-card-tag">PRÓXIMO PASSO</span>
+        <h3>Lance seu Produto Digital em Apenas 7 Dias</h3>
+        <p>Cronograma dia a dia, 12 templates de copy e scripts de aquecimento, abertura e fechamento — para o produto que você acabou de criar não ficar parado.</p>
+      </div>
+      <a href="https://digierammd.github.io/operacao-10x-os/kit-7-dias/" class="cross-card-link">Ver o kit de lançamento →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-label">PERGUNTAS FREQUENTES</div>
+    <h2 style="margin-bottom:36px;">Antes de decidir</h2>
+
+    <details class="faq-item" open>
+      <summary>Preciso ter experiência prévia?</summary>
+      <p>Não. O framework foi desenhado para quem nunca criou um produto digital — cada etapa é guiada, sem termos técnicos desnecessários.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Preciso pagar por ferramentas de IA?</summary>
+      <p>Não. Todo o processo usa ferramentas de IA com camada gratuita suficiente para criar o produto do início ao fim.</p>
+    </details>
+    <details class="faq-item">
+      <summary>As 24 horas precisam ser corridas?</summary>
+      <p>Não. 24 horas representa o tempo de execução ativa do processo — você pode distribuir os 4 blocos ao longo dos dias que fizerem sentido pra sua rotina.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Como recebo o material?</summary>
+      <p>Acesso liberado imediatamente após a confirmação do pagamento, direto na plataforma Kiwify.</p>
+    </details>
+    <details class="faq-item">
+      <summary>E se não funcionar para mim?</summary>
+      <p>Garantia incondicional de 7 dias. Se não fizer sentido pra você, devolução total, sem perguntas.</p>
+    </details>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <div class="section-label" style="text-align:center;">ÚLTIMA CHAMADA</div>
+    <h2>Daqui a 24 horas você pode ter<br>um produto pronto — ou a mesma ideia parada.</h2>
+    <p class="lead">A diferença entre as duas é começar agora.</p>
+    <a href="https://pay.kiwify.com.br/C7gM1Tp" class="btn-primary">Quero meu produto em 24h →</a>
+  </div>
+</section>
+
+<footer>
+  <p>OPERAÇÃO 10X © 2026 · PRODUTO DIGITAL · GARANTIA DE 7 DIAS</p>
+</footer>
+
+</body>
+</html>
