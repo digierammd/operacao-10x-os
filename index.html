@@ -3,7 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vault 10X — Operação 10X</title>
+<title>Vault 10X — Crie e Venda Produtos Digitais com IA | Operação 10X</title>
+<meta name="description" content="3 guias práticos para criar, lançar e vender seu primeiro produto digital com IA — do zero à primeira venda. Acesso imediato. Garantia de 7 dias.">
+
+<!-- Open Graph / WhatsApp / Instagram link preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vault 10X — Crie e Venda Produtos Digitais com IA">
+<meta property="og:description" content="3 guias práticos para sair do zero e ter seu primeiro produto digital publicado e vendendo. R$97 — acesso imediato, garantia de 7 dias.">
+<meta property="og:url" content="https://digierammd.github.io/operacao-10x-os/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vault 10X — Crie e Venda Produtos Digitais com IA">
+<meta name="twitter:description" content="3 guias práticos para sair do zero e ter seu primeiro produto digital publicado e vendendo.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23080808%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-weight=%22900%22 fill=%22%23C8FF00%22 text-anchor=%22middle%22 font-family=%22Arial%22>10X</text></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -447,6 +461,84 @@
     color: var(--dim);
     letter-spacing: 0.08em;
   }
+  /* ─── FAQ ─── */
+  .faq-list {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .faq-item {
+    background: var(--surface);
+    padding: 24px 28px;
+  }
+  .faq-q {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--lime);
+    margin-bottom: 10px;
+  }
+  .faq-a {
+    font-size: 15px;
+    color: #AAAAAA;
+    line-height: 1.6;
+  }
+
+  /* ─── STICKY MOBILE CTA ─── */
+  .sticky-cta {
+    display: none;
+  }
+  @media (max-width: 680px) {
+    .sticky-cta {
+      display: flex;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      padding: 12px 16px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .sticky-cta .price {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 22px;
+      color: var(--lime);
+      white-space: nowrap;
+    }
+    .sticky-cta a {
+      background: var(--lime);
+      color: #080808;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 12px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    body { padding-bottom: 64px; }
+  }
+
+  /* ─── MOBILE PRODUCT CARD FIX ─── */
+  @media (max-width: 560px) {
+    .product-card {
+      grid-template-columns: 1fr;
+    }
+    .product-value {
+      text-align: left;
+      margin-top: 4px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -604,6 +696,32 @@
   </div>
 </section>
 
+<!-- FAQ / OBJEÇÕES -->
+<section>
+  <div class="container">
+    <p class="section-label">Antes de decidir</p>
+    <h2 class="section-title">Suas dúvidas,<br>respondidas.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">"Não tenho tempo para mais um curso."</p>
+        <p class="faq-a">O Vault 10X foi desenhado para quem tem pouco tempo. O Framework Produto em 24H entrega resultado em um único dia — e o cronograma de 30 dias pede só 1 a 2 horas por dia.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">"Não sei se vai funcionar para mim."</p>
+        <p class="faq-a">O material foi pensado para quem nunca vendeu nada online. Não assume nenhum conhecimento prévio — cada etapa é explicada do zero, com exemplos práticos.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">"R$97 é caro?"</p>
+        <p class="faq-a">Compare com o custo de continuar travado, sem lançar nada. Separados, os 3 guias somam R$148 — no Vault 10X você leva tudo por R$97, com garantia de 7 dias.</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">"Preciso pagar por ferramentas de IA?"</p>
+        <p class="faq-a">Não. Todo o sistema foi construído em torno de ferramentas gratuitas — ChatGPT, Claude, Gemini e plataformas como Canva e Kiwify no plano free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- PREÇO -->
 <section id="preco">
   <div class="container">
@@ -651,6 +769,12 @@
     <p>OPERAÇÃO 10X · operacao10x.com · 2025</p>
   </div>
 </footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <span class="price">R$97</span>
+  <a href="https://pay.kiwify.com.br/1hFJ3K4">Garantir agora</a>
+</div>
 
 </body>
 </html>
