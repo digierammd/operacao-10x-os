@@ -3,28 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Operação 10X — Acelere Seu Sucesso com Produtos Digitais e IA</title>
-  <meta name="description" content="Frameworks, templates e cronogramas práticos para criar, lançar e vender seu primeiro produto digital usando IA gratuita. Escolha seu produto ou leve o Vault 10X completo.">
+  <title>Operação 10X — A Fórmula do Crescimento</title>
+  <meta name="description" content="Frameworks, templates e cronogramas práticos para criar, lançar e vender seu primeiro produto digital usando IA. Acelere seu sucesso com a Operação 10X.">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Operação 10X — Acelere Seu Sucesso">
-  <meta property="og:description" content="Frameworks, templates e cronogramas práticos para sair do zero e vender seu primeiro produto digital com IA.">
+  <meta property="og:title" content="Operação 10X — A Fórmula do Crescimento">
+  <meta property="og:description" content="Frameworks práticos para sair do zero e vender seu primeiro produto digital com IA.">
   <meta property="og:locale" content="pt_BR">
 
-  <!-- Fontes Premium -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            opDark: '#06080D',
+            opDark: '#070A10',
             opSteel: '#0E131C',
             opBlue: '#1FB6FF',
             opOrange: '#FF7A1A',
@@ -41,83 +38,118 @@
   </script>
 
   <style>
-    body {
-      background-color: #06080D;
-      color: #F3F4F6;
+    body { background-color: #070A10; color: #F3F4F6; }
+
+    .circuit-bg {
+      background-color: #070A10;
       background-image:
-        linear-gradient(rgba(31,182,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(31,182,255,0.05) 1px, transparent 1px);
-      background-size: 48px 48px;
+        radial-gradient(ellipse at 75% 20%, rgba(31,182,255,0.16), transparent 55%),
+        radial-gradient(ellipse at 90% 60%, rgba(255,122,26,0.10), transparent 50%),
+        linear-gradient(rgba(31,182,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(31,182,255,0.07) 1px, transparent 1px);
+      background-size: auto, auto, 42px 42px, 42px 42px;
     }
     .text-glow-blue { text-shadow: 0 0 18px rgba(31,182,255,0.45); }
     .text-glow-orange { text-shadow: 0 0 18px rgba(255,122,26,0.45); }
-    .box-glow { box-shadow: 0 0 40px rgba(31,182,255,0.06), 0 0 60px rgba(255,122,26,0.04); }
-    .grad-border {
-      border-image: linear-gradient(90deg, #1FB6FF, #FF7A1A) 1;
+    .ring-glow {
+      box-shadow: 0 0 60px rgba(31,182,255,0.18), 0 0 90px rgba(255,122,26,0.10);
     }
+    .card-hover { transition: all .25s ease; }
+    .card-hover:hover { transform: translateY(-3px); }
   </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden">
 
-  <!-- Top bar -->
-  <div class="bg-black border-b border-[#161B26] py-2.5 px-4 text-center">
-    <p class="font-mono text-[11px] text-opAmber uppercase tracking-widest font-bold">
-      ⚡ Operação 10X • Sistemas práticos para criar e vender produtos digitais com IA
-    </p>
-  </div>
+  <!-- Nav -->
+  <nav class="sticky top-0 z-40 bg-[#070A10]/90 backdrop-blur border-b border-[#161B26]">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="./" class="flex items-center gap-2">
+        <img src="./assets/logo-operacao10x.png" alt="Operação 10X" class="w-9 h-9 rounded-full">
+        <span class="font-display font-black text-sm uppercase tracking-wide text-white hidden sm:block">Operação 10X</span>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="#produtos" class="font-mono text-[11px] sm:text-xs text-gray-300 hover:text-opBlue uppercase tracking-widest transition-colors px-2 py-2">Produtos</a>
+        <a href="./blog/" class="font-mono text-[11px] sm:text-xs text-gray-300 hover:text-opOrange uppercase tracking-widest transition-colors px-2 py-2">Blog</a>
+        <a href="#garantia" class="hidden sm:block font-mono text-[11px] sm:text-xs text-gray-300 hover:text-white uppercase tracking-widest transition-colors px-2 py-2">Garantia</a>
+        <a href="#contato" class="hidden sm:block font-mono text-[11px] sm:text-xs text-gray-300 hover:text-white uppercase tracking-widest transition-colors px-2 py-2">Contato</a>
+        <a href="#produtos" class="ml-1 px-4 py-2 bg-gradient-to-r from-opBlue to-opOrange text-black font-display font-black text-xs uppercase tracking-wider italic rounded">Começar</a>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero -->
-  <header class="relative pt-14 pb-16 md:pt-20 md:pb-24 px-6 border-b border-[#161B26] overflow-hidden">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(31,182,255,0.10),transparent_55%)] pointer-events-none"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,122,26,0.08),transparent_55%)] pointer-events-none"></div>
-
-    <div class="max-w-3xl mx-auto text-center space-y-8 relative z-10">
-      <img src="./assets/logo-operacao10x.png" alt="Operação 10X" class="w-48 sm:w-60 mx-auto drop-shadow-[0_0_35px_rgba(31,182,255,0.25)]">
-
-      <div class="space-y-4">
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-display font-black uppercase leading-tight tracking-tight text-white">
-          DO ZERO AO SEU PRIMEIRO PRODUTO DIGITAL <span class="bg-gradient-to-r from-opBlue to-opOrange bg-clip-text text-transparent">VENDENDO</span>
+  <header class="circuit-bg relative px-6 pt-16 pb-20 md:pt-24 md:pb-28 border-b border-[#161B26] overflow-hidden">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="space-y-6 text-center md:text-left">
+        <span class="inline-block font-mono text-[11px] tracking-[0.25em] text-opAmber uppercase font-bold bg-opAmber/10 px-4 py-2 rounded-full border border-opAmber/20">
+          ⚡ Sistemas práticos para vender com IA
+        </span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-black uppercase leading-[0.95] tracking-tight text-white">
+          A FÓRMULA DO<br>CRESCIMENTO
         </h1>
-        <p class="text-sm sm:text-base md:text-lg text-gray-400 font-light max-w-xl mx-auto leading-relaxed">
-          Frameworks, templates de copy e cronogramas práticos — feitos para quem quer validar, criar e vender usando Inteligência Artificial, sem depender de equipe ou ferramentas caras.
+        <p class="text-base md:text-lg text-gray-400 font-light max-w-md mx-auto md:mx-0">
+          ACELERE SEU SUCESSO! Frameworks, templates de copy e cronogramas práticos para criar e vender seu primeiro produto digital — sem depender de equipe.
         </p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center md:justify-start pt-2">
+          <a href="#produtos" class="px-7 py-4 bg-gradient-to-r from-opBlue to-opOrange text-black font-display font-black text-base uppercase tracking-wider italic rounded transition-transform hover:scale-105 shadow-[0_0_30px_rgba(255,122,26,0.25)]">
+            Ver Produtos
+          </a>
+          <a href="./blog/" class="px-7 py-4 bg-transparent border border-[#2A3242] text-white font-display font-black text-base uppercase tracking-wider italic rounded transition-colors hover:border-opBlue">
+            Ler o Blog
+          </a>
+        </div>
       </div>
 
-      <div class="pt-2">
-        <a href="#produtos" class="inline-block px-8 py-4 bg-gradient-to-r from-opBlue to-opOrange text-black font-display font-black text-lg md:text-xl tracking-wider uppercase italic transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,122,26,0.25)]">
-          VER OS PRODUTOS
-        </a>
-        <div class="mt-4 flex flex-wrap items-center justify-center gap-3 text-[11px] font-mono text-gray-500">
-          <span>✓ Pagamento Único</span>
-          <span>•</span>
-          <span>✓ Acesso Vitalício</span>
-          <span>•</span>
-          <span>✓ Entrega Imediata</span>
-          <span>•</span>
-          <span>✓ Garantia de 7 Dias</span>
-        </div>
+      <div class="flex justify-center relative">
+        <div class="absolute inset-0 m-auto w-64 h-64 md:w-80 md:h-80 rounded-full ring-glow"></div>
+        <img src="./assets/logo-operacao10x.png" alt="Operação 10X" class="relative w-56 sm:w-64 md:w-80 drop-shadow-[0_0_45px_rgba(31,182,255,0.3)]">
       </div>
     </div>
   </header>
 
-  <!-- Para quem é a Operação 10X -->
-  <section class="py-14 md:py-20 px-6 max-w-5xl mx-auto">
-    <div class="grid md:grid-cols-3 gap-6 text-center">
-      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] space-y-2">
-        <span class="text-2xl">🎯</span>
-        <h3 class="font-display text-lg font-black text-white uppercase">Sem Adivinhação</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">Passo a passo cirúrgico, sem teoria solta nem fórmula mágica. Você sabe exatamente o que fazer a cada etapa.</p>
+  <!-- Pilares -->
+  <section class="py-16 md:py-24 px-6 max-w-5xl mx-auto space-y-12">
+    <div class="text-center space-y-2">
+      <span class="font-mono text-xs text-opBlue uppercase tracking-widest font-bold">COMO FUNCIONA</span>
+      <h2 class="text-3xl md:text-4xl font-display font-black uppercase text-white tracking-wide">
+        OS PILARES DA OPERAÇÃO
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] space-y-3 card-hover">
+        <div class="w-11 h-11 rounded-lg bg-opOrange/10 border border-opOrange/30 flex items-center justify-center text-xl">🚀</div>
+        <h3 class="font-display text-base font-black text-white uppercase">Estratégia de Alto Impacto</h3>
+        <p class="text-xs text-gray-400 leading-relaxed">Frameworks objetivos para validar e estruturar seu produto digital sem travar na teoria.</p>
       </div>
-      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] space-y-2">
-        <span class="text-2xl">🤖</span>
-        <h3 class="font-display text-lg font-black text-white uppercase">100% Com IA Grátis</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">Toda a stack recomendada roda em planos gratuitos. Nada de assinatura cara antes do seu primeiro faturamento.</p>
+      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] space-y-3 card-hover">
+        <div class="w-11 h-11 rounded-lg bg-opBlue/10 border border-opBlue/30 flex items-center justify-center text-xl">🎯</div>
+        <h3 class="font-display text-base font-black text-white uppercase">Execução com IA</h3>
+        <p class="text-xs text-gray-400 leading-relaxed">Ferramentas e prompts gratuitos para criar copy, conteúdo e materiais sem depender de equipe.</p>
       </div>
-      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] space-y-2">
-        <span class="text-2xl">⚡</span>
-        <h3 class="font-display text-lg font-black text-white uppercase">Execução Rápida</h3>
-        <p class="text-xs text-gray-400 leading-relaxed">Materiais pensados para quem tem pouco tempo. Resultados em horas ou dias, não em meses.</p>
+      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] space-y-3 card-hover">
+        <div class="w-11 h-11 rounded-lg bg-opAmber/10 border border-opAmber/30 flex items-center justify-center text-xl">🏆</div>
+        <h3 class="font-display text-base font-black text-white uppercase">Caminho do Sucesso</h3>
+        <p class="text-xs text-gray-400 leading-relaxed">Roteiro passo a passo: posicionamento, criação, lançamento e venda — nessa ordem.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- 2 CTA Cards: Produtos / Blog -->
+  <section id="produtos-blog" class="px-6 max-w-5xl mx-auto pb-16 md:pb-24">
+    <div class="grid sm:grid-cols-2 gap-6">
+      <a href="#produtos" class="group block bg-[#0E131C] p-8 rounded-2xl border-2 border-opOrange/40 hover:border-opOrange transition-all space-y-3 card-hover">
+        <span class="font-mono text-[10px] text-opOrange uppercase tracking-widest font-bold">04 PRODUTOS DISPONÍVEIS</span>
+        <h3 class="font-display text-2xl font-black text-white uppercase">Ver Produtos</h3>
+        <p class="text-xs text-gray-400 leading-relaxed">Frameworks, templates e cronogramas prontos para cada etapa — ou o pacote completo com desconto.</p>
+        <span class="inline-block font-mono text-[10px] text-opOrange uppercase font-bold group-hover:translate-x-1 transition-transform pt-1">Explorar produtos →</span>
+      </a>
+      <a href="./blog/" class="group block bg-[#0E131C] p-8 rounded-2xl border-2 border-opBlue/40 hover:border-opBlue transition-all space-y-3 card-hover">
+        <span class="font-mono text-[10px] text-opBlue uppercase tracking-widest font-bold">ARTIGOS E ANÁLISES</span>
+        <h3 class="font-display text-2xl font-black text-white uppercase">Blog</h3>
+        <p class="text-xs text-gray-400 leading-relaxed">Conteúdo sobre produtos digitais, IA e marketing — sempre atualizado para 2026.</p>
+        <span class="inline-block font-mono text-[10px] text-opBlue uppercase font-bold group-hover:translate-x-1 transition-transform pt-1">Ler artigos →</span>
+      </a>
     </div>
   </section>
 
@@ -126,7 +158,7 @@
     <div class="text-center space-y-2 pt-4">
       <span class="font-mono text-xs text-opBlue uppercase tracking-widest font-bold">ESCOLHA SEU PONTO DE PARTIDA</span>
       <h2 class="text-3xl md:text-5xl font-display font-black uppercase text-white tracking-wide">
-        OS PRODUTOS DA <span class="text-glow-orange text-transparent bg-clip-text bg-gradient-to-r from-opOrange to-opAmber">OPERAÇÃO 10X</span>
+        OS PRODUTOS DA <span class="text-transparent bg-clip-text bg-gradient-to-r from-opOrange to-opAmber">OPERAÇÃO 10X</span>
       </h2>
       <p class="text-sm text-gray-400 max-w-xl mx-auto pt-2">
         Compre o que resolve sua etapa atual ou leve o Vault 10X completo com desconto.
@@ -135,8 +167,7 @@
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
 
-      <!-- Produto 1: Framework 24h -->
-      <a href="./produto-digital-24h/" class="group block bg-[#0E131C] p-6 rounded-2xl border border-[#1B212E] hover:border-opBlue/50 transition-all flex flex-col justify-between space-y-6">
+      <a href="./produto-digital-24h/" class="group block bg-[#0E131C] p-6 rounded-2xl border border-[#1B212E] hover:border-opBlue/50 transition-all flex flex-col justify-between space-y-6 card-hover">
         <div class="space-y-3">
           <span class="font-mono text-[10px] text-opBlue font-bold uppercase tracking-widest bg-opBlue/10 border border-opBlue/20 px-2.5 py-1 rounded inline-block">VALIDAÇÃO + CRIAÇÃO</span>
           <h3 class="font-display text-xl font-black text-white uppercase leading-tight pt-1">FRAMEWORK PRODUTO EM 24H</h3>
@@ -148,8 +179,7 @@
         </div>
       </a>
 
-      <!-- Produto 2: Kit 7 dias -->
-      <a href="./kit-7-dias/" class="group block bg-[#0E131C] p-6 rounded-2xl border border-[#1B212E] hover:border-opOrange/50 transition-all flex flex-col justify-between space-y-6">
+      <a href="./kit-7-dias/" class="group block bg-[#0E131C] p-6 rounded-2xl border border-[#1B212E] hover:border-opOrange/50 transition-all flex flex-col justify-between space-y-6 card-hover">
         <div class="space-y-3">
           <span class="font-mono text-[10px] text-opOrange font-bold uppercase tracking-widest bg-opOrange/10 border border-opOrange/20 px-2.5 py-1 rounded inline-block">LANÇAMENTO ORGÂNICO</span>
           <h3 class="font-display text-xl font-black text-white uppercase leading-tight pt-1">KIT LANÇAMENTO 7 DIAS</h3>
@@ -161,8 +191,7 @@
         </div>
       </a>
 
-      <!-- Produto 3: 35 Templates -->
-      <a href="./35-templates/" class="group block bg-[#0E131C] p-6 rounded-2xl border border-[#1B212E] hover:border-opBlue/50 transition-all flex flex-col justify-between space-y-6">
+      <a href="./35-templates/" class="group block bg-[#0E131C] p-6 rounded-2xl border border-[#1B212E] hover:border-opBlue/50 transition-all flex flex-col justify-between space-y-6 card-hover">
         <div class="space-y-3">
           <span class="font-mono text-[10px] text-opBlue font-bold uppercase tracking-widest bg-opBlue/10 border border-opBlue/20 px-2.5 py-1 rounded inline-block">COPY PRONTA</span>
           <h3 class="font-display text-xl font-black text-white uppercase leading-tight pt-1">35 TEMPLATES DE COPY</h3>
@@ -174,8 +203,7 @@
         </div>
       </a>
 
-      <!-- Produto 4: Vault 10X (bundle) -->
-      <a href="./vault10x/" class="group block bg-black p-6 rounded-2xl border-2 border-opOrange/50 hover:border-opOrange transition-all flex flex-col justify-between space-y-6 box-glow relative overflow-hidden">
+      <a href="./vault10x/" class="group block bg-black p-6 rounded-2xl border-2 border-opOrange/50 hover:border-opOrange transition-all flex flex-col justify-between space-y-6 ring-glow relative overflow-hidden card-hover">
         <span class="absolute top-0 right-0 bg-gradient-to-r from-opBlue to-opOrange text-black text-[9px] font-mono font-black uppercase px-3 py-1 tracking-widest">-42%</span>
         <div class="space-y-3">
           <span class="font-mono text-[10px] text-black font-bold uppercase tracking-widest bg-gradient-to-r from-opBlue to-opOrange px-2.5 py-1 rounded inline-block">PACOTE COMPLETO</span>
@@ -194,22 +222,47 @@
     </div>
   </section>
 
-  <!-- Garantia -->
-  <section class="py-12 px-6 max-w-3xl mx-auto">
-    <div class="flex flex-col sm:flex-row gap-4 items-start bg-[#0E131C] p-6 rounded-xl border border-[#1B212E]">
-      <span class="text-2xl">🛡</span>
-      <div>
-        <p class="font-display text-sm font-black text-white uppercase tracking-wide">Garantia incondicional de 7 dias em todos os produtos</p>
-        <p class="text-xs text-gray-400 mt-1 leading-relaxed">Se achar que não é para você, é só pedir o reembolso dentro do prazo. Sem perguntas, sem burocracia.</p>
+  <!-- Confiança / Garantia -->
+  <section id="garantia" class="py-14 px-6 max-w-5xl mx-auto border-t border-[#161B26]">
+    <div class="grid sm:grid-cols-3 gap-5">
+      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] text-center space-y-2">
+        <span class="text-2xl">🛡</span>
+        <h4 class="font-display text-sm font-black text-white uppercase">Garantia de 7 Dias</h4>
+        <p class="text-xs text-gray-400">Reembolso incondicional em qualquer produto, sem perguntas.</p>
+      </div>
+      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] text-center space-y-2">
+        <span class="text-2xl">🔒</span>
+        <h4 class="font-display text-sm font-black text-white uppercase">Pagamento Seguro</h4>
+        <p class="text-xs text-gray-400">Checkout criptografado processado pela Kiwify.</p>
+      </div>
+      <div class="bg-[#0E131C] p-6 rounded-xl border border-[#1B212E] text-center space-y-2">
+        <span class="text-2xl">⚡</span>
+        <h4 class="font-display text-sm font-black text-white uppercase">Acesso Imediato</h4>
+        <p class="text-xs text-gray-400">Liberação automática por e-mail após a confirmação da compra.</p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black py-10 px-6 text-center text-xs text-gray-600 border-t border-[#161B26] font-mono space-y-2">
-    <img src="./assets/logo-operacao10x.png" alt="Operação 10X" class="w-12 h-12 mx-auto opacity-70 rounded-full">
-    <p>© 2026 Operação 10X. Todos os direitos reservados.</p>
-    <p class="text-[10px] text-gray-700">Este site não faz parte do Facebook, Google ou Kiwify. Os resultados variam de acordo com cada aplicador.</p>
+  <footer id="contato" class="bg-black border-t border-[#161B26] py-10 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="./assets/logo-operacao10x.png" alt="Operação 10X" class="w-10 h-10 rounded-full opacity-80">
+        <div class="text-left">
+          <p class="font-display font-black text-sm text-white uppercase">Operação 10X</p>
+          <p class="font-mono text-[10px] text-gray-500">contato@operacao10x.com</p>
+        </div>
+      </div>
+      <div class="flex gap-6 font-mono text-[11px] text-gray-500 uppercase tracking-widest">
+        <a href="#produtos" class="hover:text-white transition-colors">Produtos</a>
+        <a href="./blog/" class="hover:text-white transition-colors">Blog</a>
+        <a href="#garantia" class="hover:text-white transition-colors">Garantia</a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto pt-8 mt-8 border-t border-[#161B26] text-center">
+      <p class="font-mono text-[10px] text-gray-600">© 2026 Operação 10X. Todos os direitos reservados.</p>
+      <p class="font-mono text-[10px] text-gray-700 mt-1">Este site não faz parte do Facebook, Google ou Kiwify. Os resultados variam de acordo com cada aplicador.</p>
+    </div>
   </footer>
 
 </body>

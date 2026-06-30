@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Operação 10X</title>
+  <meta name="description" content="Artigos sobre produtos digitais, IA e marketing — atualizados para 2026.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { opDark: '#070A10', opSteel: '#0E131C', opBlue: '#1FB6FF', opOrange: '#FF7A1A', opAmber: '#FFB23F' },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Big Shoulders Display"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #070A10; color: #F3F4F6; }
+  </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-40 bg-[#070A10]/90 backdrop-blur border-b border-[#161B26]">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="../" class="flex items-center gap-2">
+        <img src="../assets/logo-operacao10x.png" alt="Operação 10X" class="w-9 h-9 rounded-full">
+        <span class="font-display font-black text-sm uppercase tracking-wide text-white hidden sm:block">Operação 10X</span>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="../#produtos" class="font-mono text-[11px] sm:text-xs text-gray-300 hover:text-opBlue uppercase tracking-widest transition-colors px-2 py-2">Produtos</a>
+        <a href="./" class="font-mono text-[11px] sm:text-xs text-opOrange uppercase tracking-widest px-2 py-2">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="px-6 pt-14 pb-10 max-w-4xl mx-auto text-center space-y-3">
+    <span class="font-mono text-[11px] text-opOrange uppercase tracking-widest font-bold">Atualizado para 2026</span>
+    <h1 class="text-3xl md:text-5xl font-display font-black uppercase text-white tracking-wide">Blog da Operação 10X</h1>
+    <p class="text-sm md:text-base text-gray-400 max-w-xl mx-auto">
+      Artigos sobre produtos digitais, inteligência artificial aplicada e marketing direto — sempre com base em dados e tendências atuais.
+    </p>
+  </header>
+
+  <!-- Estado: ainda sem artigos publicados -->
+  <section class="px-6 max-w-4xl mx-auto pb-24">
+    <div class="bg-[#0E131C] border border-[#1B212E] rounded-2xl p-10 text-center space-y-4">
+      <span class="text-3xl">📝</span>
+      <h2 class="font-display text-xl font-black text-white uppercase">Primeiros artigos a caminho</h2>
+      <p class="text-sm text-gray-400 max-w-md mx-auto">
+        Estamos preparando o primeiro conteúdo do blog, com curadoria e checagem de fatos antes da publicação. Volte em breve.
+      </p>
+      <a href="../#produtos" class="inline-block mt-2 px-6 py-3 bg-gradient-to-r from-opBlue to-opOrange text-black font-display font-black text-sm uppercase tracking-wider italic rounded">
+        Enquanto isso, veja os produtos
+      </a>
+    </div>
+
+    <!-- Grid pronto para os próximos posts (placeholder estrutural) -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 opacity-40 pointer-events-none select-none">
+      <div class="bg-[#0E131C] border border-[#1B212E] rounded-xl p-5 space-y-3">
+        <div class="h-28 rounded-lg bg-[#161B26]"></div>
+        <div class="h-3 w-2/3 bg-[#161B26] rounded"></div>
+        <div class="h-3 w-full bg-[#161B26] rounded"></div>
+      </div>
+      <div class="bg-[#0E131C] border border-[#1B212E] rounded-xl p-5 space-y-3">
+        <div class="h-28 rounded-lg bg-[#161B26]"></div>
+        <div class="h-3 w-2/3 bg-[#161B26] rounded"></div>
+        <div class="h-3 w-full bg-[#161B26] rounded"></div>
+      </div>
+      <div class="bg-[#0E131C] border border-[#1B212E] rounded-xl p-5 space-y-3">
+        <div class="h-28 rounded-lg bg-[#161B26]"></div>
+        <div class="h-3 w-2/3 bg-[#161B26] rounded"></div>
+        <div class="h-3 w-full bg-[#161B26] rounded"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-[#161B26] py-8 px-6 text-center">
+    <p class="font-mono text-[10px] text-gray-600">© 2026 Operação 10X. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
