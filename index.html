@@ -1,780 +1,371 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vault 10X — Crie e Venda Produtos Digitais com IA | Operação 10X</title>
-<meta name="description" content="3 guias práticos para criar, lançar e vender seu primeiro produto digital com IA — do zero à primeira venda. Acesso imediato. Garantia de 7 dias.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault 10X — Crie e Venda Produtos Digitais com IA | Operação 10X</title>
+  <meta name="description" content="3 guias práticos para criar, lançar e vender seu primeiro produto digital com IA — do zero à primeira venda. Acesso imediato. Garantia de 7 dias.">
 
-<!-- Open Graph / WhatsApp / Instagram link preview -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Vault 10X — Crie e Venda Produtos Digitais com IA">
-<meta property="og:description" content="3 guias práticos para sair do zero e ter seu primeiro produto digital publicado e vendendo. R$97 — acesso imediato, garantia de 7 dias.">
-<meta property="og:url" content="https://digierammd.github.io/operacao-10x-os/">
-<meta property="og:locale" content="pt_BR">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vault 10X — Crie e Venda Produtos Digitais com IA">
-<meta name="twitter:description" content="3 guias práticos para sair do zero e ter seu primeiro produto digital publicado e vendendo.">
+  <!-- Open Graph / WhatsApp / Instagram link preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vault 10X — Crie e Venda Produtos Digitais com IA">
+  <meta property="og:description" content="3 guias práticos para sair do zero e ter seu primeiro produto digital publicado e vendendo. R$97 — acesso imediato, garantia de 7 dias.">
+  <meta property="og:locale" content="pt_BR">
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23080808%22/><text x=%2250%22 y=%2266%22 font-size=%2244%22 font-weight=%22900%22 fill=%22%23C8FF00%22 text-anchor=%22middle%22 font-family=%22Arial%22>10X</text></svg>">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --lime: #C8FF00;
-    --blue: #00D4FF;
-    --bg: #080808;
-    --surface: #111111;
-    --surface2: #181818;
-    --border: #222222;
-    --text: #FFFFFF;
-    --muted: #888888;
-    --dim: #444444;
-    --font-display: 'Big Shoulders Display', sans-serif;
-    --font-body: 'Work Sans', sans-serif;
-    --font-mono: 'IBM Plex Mono', monospace;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  /* ─── LAYOUT ─── */
-  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  .container--wide { max-width: 960px; margin: 0 auto; padding: 0 24px; }
-
-  /* ─── NAV ─── */
-  nav {
-    border-bottom: 1px solid var(--border);
-    padding: 20px 0;
-  }
-  nav .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .logo {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    color: var(--lime);
-    text-transform: uppercase;
-  }
-  .logo span { color: var(--muted); }
-
-  /* ─── HERO ─── */
-  .hero {
-    padding: 80px 0 64px;
-    text-align: center;
-  }
-  .hero-tag {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--lime);
-    background: rgba(200,255,0,0.08);
-    border: 1px solid rgba(200,255,0,0.2);
-    padding: 6px 16px;
-    border-radius: 100px;
-    margin-bottom: 32px;
-  }
-  .hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(52px, 9vw, 96px);
-    font-weight: 900;
-    line-height: 0.92;
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-  }
-  .hero h1 .accent { color: var(--lime); }
-  .hero-sub {
-    font-size: 18px;
-    color: #BBBBBB;
-    max-width: 560px;
-    margin: 0 auto 48px;
-    line-height: 1.6;
-  }
-  .cta-main {
-    display: inline-block;
-    background: var(--lime);
-    color: #080808;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 18px 48px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: transform 0.15s, background 0.15s;
-  }
-  .cta-main:hover { transform: translateY(-2px); background: #d8ff20; }
-  .hero-guarantee {
-    margin-top: 16px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  /* ─── DIVIDER ─── */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--border);
-    margin: 0;
-  }
-
-  /* ─── SECTION ─── */
-  section { padding: 80px 0; }
-  section + section { border-top: 1px solid var(--border); }
-
-  .section-label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 20px;
-  }
-  .section-title {
-    font-family: var(--font-display);
-    font-size: clamp(36px, 5vw, 56px);
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 0.95;
-    margin-bottom: 24px;
-  }
-  .section-title .accent { color: var(--lime); }
-  .section-body {
-    font-size: 17px;
-    color: #CCCCCC;
-    line-height: 1.7;
-    max-width: 620px;
-  }
-
-  /* ─── PROBLEM ─── */
-  .problem-list {
-    list-style: none;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .problem-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 20px 24px;
-    font-size: 16px;
-    color: #CCCCCC;
-  }
-  .problem-list li::before {
-    content: '×';
-    color: #FF4444;
-    font-family: var(--font-display);
-    font-size: 22px;
-    font-weight: 900;
-    flex-shrink: 0;
-    line-height: 1.2;
-  }
-
-  /* ─── PRODUCTS ─── */
-  .products-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 48px;
-  }
-  .product-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px 32px;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 16px;
-    align-items: start;
-  }
-  .product-card:first-child {
-    border-color: rgba(200,255,0,0.3);
-    background: rgba(200,255,0,0.04);
-  }
-  .product-num {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--lime);
-    letter-spacing: 0.1em;
-    margin-bottom: 8px;
-  }
-  .product-name {
-    font-family: var(--font-display);
-    font-size: 22px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .product-desc {
-    font-size: 15px;
-    color: #AAAAAA;
-    line-height: 1.6;
-  }
-  .product-includes {
-    margin-top: 14px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .product-includes span {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--muted);
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    padding: 4px 10px;
-    border-radius: 4px;
-    letter-spacing: 0.05em;
-  }
-  .product-value {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--dim);
-    text-align: right;
-    white-space: nowrap;
-    text-decoration: line-through;
-  }
-
-  /* ─── VALUE STACK ─── */
-  .stack-table {
-    width: 100%;
-    margin-top: 40px;
-    border-collapse: collapse;
-  }
-  .stack-table tr { border-bottom: 1px solid var(--border); }
-  .stack-table tr:last-child { border-bottom: none; }
-  .stack-table td {
-    padding: 16px 0;
-    font-size: 15px;
-    color: #CCCCCC;
-  }
-  .stack-table td:first-child { padding-right: 16px; }
-  .stack-table td.check {
-    font-family: var(--font-mono);
-    font-size: 16px;
-    color: var(--lime);
-    width: 32px;
-    padding-right: 16px;
-  }
-  .stack-table td.value {
-    text-align: right;
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--dim);
-    text-decoration: line-through;
-    white-space: nowrap;
-  }
-  .stack-total {
-    margin-top: 24px;
-    padding: 24px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .stack-total .label {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    text-transform: uppercase;
-  }
-  .stack-total .amount {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    color: var(--muted);
-    text-decoration: line-through;
-  }
-
-  /* ─── FOR WHO ─── */
-  .who-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-top: 48px;
-  }
-  @media (max-width: 600px) { .who-grid { grid-template-columns: 1fr; } }
-  .who-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 28px;
-  }
-  .who-card.yes { border-color: rgba(200,255,0,0.3); }
-  .who-card.no { border-color: rgba(255,68,68,0.2); }
-  .who-title {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-  .who-card.yes .who-title { color: var(--lime); }
-  .who-card.no .who-title { color: #FF6666; }
-  .who-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-  .who-list li {
-    font-size: 14px;
-    color: #BBBBBB;
-    padding-left: 20px;
-    position: relative;
-    line-height: 1.5;
-  }
-  .who-card.yes .who-list li::before { content: '→'; position: absolute; left: 0; color: var(--lime); }
-  .who-card.no .who-list li::before { content: '→'; position: absolute; left: 0; color: #FF6666; }
-
-  /* ─── PRICING ─── */
-  .price-block {
-    margin-top: 48px;
-    background: var(--surface);
-    border: 1px solid rgba(200,255,0,0.25);
-    border-radius: 12px;
-    padding: 48px;
-    text-align: center;
-  }
-  .price-was {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    color: var(--dim);
-    text-decoration: line-through;
-    margin-bottom: 8px;
-  }
-  .price-now {
-    font-family: var(--font-display);
-    font-size: clamp(64px, 12vw, 96px);
-    font-weight: 900;
-    color: var(--lime);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .price-note {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--muted);
-    margin-bottom: 40px;
-  }
-  .price-cta {
-    display: inline-block;
-    background: var(--lime);
-    color: #080808;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 22px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    padding: 20px 56px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: transform 0.15s;
-  }
-  .price-cta:hover { transform: translateY(-2px); }
-  .price-sub {
-    margin-top: 20px;
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--muted);
-  }
-
-  /* ─── GUARANTEE ─── */
-  .guarantee-block {
-    display: flex;
-    gap: 32px;
-    align-items: flex-start;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 36px;
-    margin-top: 0;
-  }
-  @media (max-width: 600px) { .guarantee-block { flex-direction: column; } }
-  .guarantee-icon {
-    font-family: var(--font-display);
-    font-size: 48px;
-    font-weight: 900;
-    color: var(--lime);
-    line-height: 1;
-    flex-shrink: 0;
-  }
-  .guarantee-title {
-    font-family: var(--font-display);
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-  }
-  .guarantee-text {
-    font-size: 15px;
-    color: #AAAAAA;
-    line-height: 1.7;
-  }
-
-  /* ─── FOOTER CTA ─── */
-  .footer-cta {
-    padding: 80px 0;
-    text-align: center;
-    border-top: 1px solid var(--border);
-  }
-  .footer-cta h2 {
-    font-family: var(--font-display);
-    font-size: clamp(40px, 6vw, 72px);
-    font-weight: 900;
-    text-transform: uppercase;
-    line-height: 0.95;
-    margin-bottom: 32px;
-  }
-  .footer-cta h2 .accent { color: var(--lime); }
-
-  /* ─── FOOTER ─── */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 32px 0;
-    text-align: center;
-  }
-  footer p {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--dim);
-    letter-spacing: 0.08em;
-  }
-  /* ─── FAQ ─── */
-  .faq-list {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-    background: var(--border);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .faq-item {
-    background: var(--surface);
-    padding: 24px 28px;
-  }
-  .faq-q {
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 16px;
-    color: var(--lime);
-    margin-bottom: 10px;
-  }
-  .faq-a {
-    font-size: 15px;
-    color: #AAAAAA;
-    line-height: 1.6;
-  }
-
-  /* ─── STICKY MOBILE CTA ─── */
-  .sticky-cta {
-    display: none;
-  }
-  @media (max-width: 680px) {
-    .sticky-cta {
-      display: flex;
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      z-index: 100;
-      background: var(--bg);
-      border-top: 1px solid var(--border);
-      padding: 12px 16px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght=700;900&family=IBM+Plex+Mono:wght=400;600;700&family=Inter:wght=300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0A0A0A',
+            brandLime: '#C8FF00',
+            brandBlue: '#00D4FF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Big Shoulders Display"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          }
+        }
+      }
     }
-    .sticky-cta .price {
-      font-family: var(--font-display);
-      font-weight: 900;
-      font-size: 22px;
-      color: var(--lime);
-      white-space: nowrap;
+  </script>
+  
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #F3F4F6;
     }
-    .sticky-cta a {
-      background: var(--lime);
-      color: #080808;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 15px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      padding: 12px 20px;
-      border-radius: 4px;
-      text-decoration: none;
-      white-space: nowrap;
+    .text-glow-lime {
+      text-shadow: 0 0 15px rgba(200, 255, 0, 0.45);
     }
-    body { padding-bottom: 64px; }
-  }
-
-  /* ─── MOBILE PRODUCT CARD FIX ─── */
-  @media (max-width: 560px) {
-    .product-card {
-      grid-template-columns: 1fr;
+    .text-glow-blue {
+      text-shadow: 0 0 15px rgba(0, 212, 255, 0.45);
     }
-    .product-value {
-      text-align: left;
-      margin-top: 4px;
+    .box-glow-lime {
+      box-shadow: 0 0 30px rgba(200, 255, 0, 0.08);
     }
-  }
-</style>
+    .box-glow-blue {
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.08);
+    }
+    .box-glow-red {
+      box-shadow: 0 0 30px rgba(239, 68, 68, 0.05);
+    }
+  </style>
 </head>
-<body>
+<body class="font-sans antialiased overflow-x-hidden pb-16 md:pb-0">
 
-<!-- NAV -->
-<nav>
-  <div class="container">
-    <div class="logo">OPERAÇÃO <span>10X</span></div>
-    <a href="#preco" class="cta-main" style="font-size:14px; padding:10px 24px;">Garantir agora</a>
-  </div>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="container">
-    <div class="hero-tag">Kit Completo · Acesso Imediato · Lançamento 2025</div>
-    <h1>
-      Crie.<br>
-      Lance.<br>
-      <span class="accent">Venda.</span>
-    </h1>
-    <p class="hero-sub">
-      3 guias práticos para sair do zero e ter seu primeiro produto digital publicado e vendendo — usando IA e ferramentas gratuitas.
+  <!-- Header / Barra de Escassez -->
+  <div class="bg-black border-b border-[#1A1A1A] py-3 px-4 text-center">
+    <p class="font-mono text-xs text-brandLime uppercase tracking-widest font-bold">
+      ⚡ ACESSO IMEDIATO LIBERADO • O COFRE COMPLETO DE PROMPTS, TEMPLATES E CRONOGRAMAS DA OPERAÇÃO 10X
     </p>
-    <a href="https://pay.kiwify.com.br/1hFJ3K4" class="cta-main">Garantir o Vault 10X por R$97</a>
-    <p class="hero-guarantee">Garantia de 7 dias · Acesso imediato após o pagamento</p>
   </div>
-</div>
 
-<hr class="divider">
+  <!-- Hero Section -->
+  <header class="relative pt-16 pb-20 md:pt-24 md:pb-28 px-6 border-b border-[#111]">
+    <!-- Background Accents -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(200,255,0,0.06),transparent_50%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,212,255,0.04),transparent_50%)] pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+      <span class="inline-block font-mono text-xs tracking-[0.25em] text-brandLime uppercase font-bold bg-brandLime/10 px-4 py-2 rounded-full border border-brandLime/20">
+        ⚡ BUNDLE DEFINITIVO • ECONOMIZE 65% NO COFRE COMPLETO
+      </span>
+      
+      <h1 class="text-6xl sm:text-8xl md:text-9xl font-display font-black uppercase leading-none tracking-tight text-white">
+        CRIE. LANCE. <span class="text-brandLime text-glow-lime">VENDA.</span>
+      </h1>
+      
+      <p class="text-base sm:text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+        3 guias práticos, frameworks e templates de alta conversão estruturados em sequência lógica. Tudo o que você precisa para criar seu ativo, configurar o checkout e vender usando IA gratuita.
+      </p>
 
-<!-- PROBLEMA -->
-<section>
-  <div class="container">
-    <p class="section-label">O problema</p>
-    <h2 class="section-title">A maioria não<br>falta <span class="accent">criatividade.</span><br>Falta sistema.</h2>
-    <p class="section-body">Sem um passo a passo claro, você passa semanas pensando, reescreve o mesmo capítulo três vezes e nunca publica nada. Reconhece alguma dessas situações?</p>
-    <ul class="problem-list">
-      <li>Teve a ideia do produto, mas não sabe por onde começar</li>
-      <li>Começou a criar e travou no meio — sem saber o que vem depois</li>
-      <li>Criou algo, mas nunca publicou porque achou que não estava pronto</li>
-      <li>Não sabe o que postar para divulgar sem parecer spam</li>
-    </ul>
-  </div>
-</section>
-
-<!-- SOLUÇÃO -->
-<section>
-  <div class="container">
-    <p class="section-label">A solução</p>
-    <h2 class="section-title">Três guias.<br>Um <span class="accent">caminho.</span></h2>
-    <p class="section-body">O Vault 10X reúne os 3 guias da Operação 10X em sequência lógica — do zero até o produto publicado e divulgado.</p>
-
-    <div class="products-grid">
-
-      <div class="product-card">
-        <div>
-          <p class="product-num">PRODUTO 01</p>
-          <h3 class="product-name">Framework Produto em 24H</h3>
-          <p class="product-desc">O sistema completo para criar um ativo digital do zero — da escolha do tema até a estrutura de venda — em 24 horas. Inclui cronograma hora a hora e stack de ferramentas 100% gratuitas.</p>
-          <div class="product-includes">
-            <span>8 capítulos</span>
-            <span>Cronograma hora a hora</span>
-            <span>Stack gratuita</span>
-          </div>
+      <div class="pt-6">
+        <a href="#checkout-section" class="inline-block px-10 py-5 bg-brandLime hover:bg-lime-400 text-black font-display font-black text-2xl tracking-wider uppercase italic transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(200,255,0,0.25)] hover:shadow-[0_0_40px_rgba(200,255,0,0.45)]">
+          GARANTIR ACESSO COMPLETO AO COFRE
+        </a>
+        <div class="mt-4 flex items-center justify-center gap-4 text-xs font-mono text-gray-500">
+          <span>✓ Pagamento Único</span>
+          <span>•</span>
+          <span>✓ Acesso Vitalício</span>
+          <span>•</span>
+          <span>✓ Entrega Imediata via Kiwify</span>
         </div>
-        <div class="product-value">R$47</div>
-      </div>
-
-      <div class="product-card">
-        <div>
-          <p class="product-num">PRODUTO 02</p>
-          <h3 class="product-name">Renda com IA em 30 Dias</h3>
-          <p class="product-desc">Cronograma dia a dia das 4 semanas que separam você de ter seu primeiro produto criado, publicado e divulgado. Cada dia tem uma ação definida — sem adivinhar o próximo passo.</p>
-          <div class="product-includes">
-            <span>Plano de 4 semanas</span>
-            <span>Ação diária definida</span>
-            <span>Sem promessas vazias</span>
-          </div>
-        </div>
-        <div class="product-value">R$37</div>
-      </div>
-
-      <div class="product-card">
-        <div>
-          <p class="product-num">PRODUTO 03</p>
-          <h3 class="product-name">60 Prompts para Instagram</h3>
-          <p class="product-desc">Prompts prontos para copiar, colar e usar com qualquer IA gratuita. Hooks, legendas, roteiros de Reels, stories e CTAs organizados em 6 categorias — adaptáveis para qualquer nicho.</p>
-          <div class="product-includes">
-            <span>60 prompts</span>
-            <span>6 categorias</span>
-            <span>Qualquer nicho</span>
-          </div>
-        </div>
-        <div class="product-value">R$37</div>
-      </div>
-
-    </div>
-
-    <!-- Value Stack -->
-    <table class="stack-table">
-      <tr>
-        <td class="check">✓</td>
-        <td>Framework Produto em 24H</td>
-        <td class="value">R$47</td>
-      </tr>
-      <tr>
-        <td class="check">✓</td>
-        <td>Renda com IA em 30 Dias</td>
-        <td class="value">R$37</td>
-      </tr>
-      <tr>
-        <td class="check">✓</td>
-        <td>60 Prompts para Instagram</td>
-        <td class="value">R$37</td>
-      </tr>
-      <tr>
-        <td class="check">✓</td>
-        <td>Guia de Boas-Vindas Vault 10X</td>
-        <td class="value">R$27</td>
-      </tr>
-    </table>
-    <div class="stack-total">
-      <div>
-        <p class="label">Valor total separado</p>
-      </div>
-      <p class="amount">R$148</p>
-    </div>
-  </div>
-</section>
-
-<!-- PARA QUEM É -->
-<section>
-  <div class="container">
-    <p class="section-label">Para quem é</p>
-    <h2 class="section-title">Este kit<br>é para <span class="accent">você?</span></h2>
-    <div class="who-grid">
-      <div class="who-card yes">
-        <p class="who-title">É para você se</p>
-        <ul class="who-list">
-          <li>Quer criar uma renda extra vendendo produtos digitais</li>
-          <li>Nunca criou nada online e não sabe por onde começar</li>
-          <li>Tem ideia mas trava na hora de executar</li>
-          <li>Quer usar IA para produzir mais rápido e com menos esforço</li>
-        </ul>
-      </div>
-      <div class="who-card no">
-        <p class="who-title">Não é para você se</p>
-        <ul class="who-list">
-          <li>Busca dinheiro sem nenhuma ação prática da sua parte</li>
-          <li>Já vende produtos digitais há anos e domina o processo</li>
-        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- FAQ / OBJEÇÕES -->
-<section>
-  <div class="container">
-    <p class="section-label">Antes de decidir</p>
-    <h2 class="section-title">Suas dúvidas,<br>respondidas.</h2>
-    <div class="faq-list">
-      <div class="faq-item">
-        <p class="faq-q">"Não tenho tempo para mais um curso."</p>
-        <p class="faq-a">O Vault 10X foi desenhado para quem tem pouco tempo. O Framework Produto em 24H entrega resultado em um único dia — e o cronograma de 30 dias pede só 1 a 2 horas por dia.</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">"Não sei se vai funcionar para mim."</p>
-        <p class="faq-a">O material foi pensado para quem nunca vendeu nada online. Não assume nenhum conhecimento prévio — cada etapa é explicada do zero, com exemplos práticos.</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">"R$97 é caro?"</p>
-        <p class="faq-a">Compare com o custo de continuar travado, sem lançar nada. Separados, os 3 guias somam R$148 — no Vault 10X você leva tudo por R$97, com garantia de 7 dias.</p>
-      </div>
-      <div class="faq-item">
-        <p class="faq-q">"Preciso pagar por ferramentas de IA?"</p>
-        <p class="faq-a">Não. Todo o sistema foi construído em torno de ferramentas gratuitas — ChatGPT, Claude, Gemini e plataformas como Canva e Kiwify no plano free.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PREÇO -->
-<section id="preco">
-  <div class="container">
-    <p class="section-label">Oferta de lançamento</p>
-    <h2 class="section-title">Invista uma vez.<br><span class="accent">Use para sempre.</span></h2>
-    <div class="price-block">
-      <p class="price-was">De R$148 separado</p>
-      <p class="price-now">R$97</p>
-      <p class="price-note">Pagamento único · Acesso imediato · Todos os 3 guias + bônus</p>
-      <a href="https://pay.kiwify.com.br/1hFJ3K4" class="price-cta">Garantir o Vault 10X agora</a>
-      <p class="price-sub">Cartão de crédito, Pix ou boleto · Processado pela Kiwify</p>
-    </div>
-  </div>
-</section>
-
-<!-- GARANTIA -->
-<section>
-  <div class="container">
-    <p class="section-label">Risco zero</p>
-    <h2 class="section-title" style="margin-bottom:40px;">Garantia de<br><span class="accent">7 dias.</span></h2>
-    <div class="guarantee-block">
-      <div class="guarantee-icon">7</div>
-      <div>
-        <h3 class="guarantee-title">Sem perguntas.</h3>
-        <p class="guarantee-text">
-          Se você comprar, abrir os materiais e sentir que não faz sentido para a sua situação — basta pedir o reembolso em até 7 dias corridos após a compra. Sem questionamentos, sem burocracia. O risco é todo nosso.
+  <!-- Problem Section -->
+  <section class="py-16 md:py-24 px-6 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-12 gap-8 items-center">
+      <div class="md:col-span-5 space-y-4">
+        <span class="font-mono text-xs text-red-500 uppercase tracking-widest font-bold">O GRANDE OBSTÁCULO</span>
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase text-white leading-none tracking-wide">
+          A MAIORIA NÃO FALTA <span class="text-red-500">CRIATIVIDADE.</span> FALTA SISTEMA.
+        </h2>
+        <p class="text-sm text-gray-400 font-sans leading-relaxed">
+          Sem um passo a passo cirúrgico e direto, você passa semanas planejando, reescreve o mesmo capítulo dezenas de vezes e nunca publica nada. O Vault 10X elimina a adivinhação.
         </p>
       </div>
+
+      <div class="md:col-span-7 bg-[#0E0E0E] border border-red-950/40 p-8 rounded-2xl space-y-6 box-glow-red">
+        <h3 class="font-mono text-xs text-gray-400 uppercase">Qual desses erros você continua cometendo?</h3>
+        <ul class="space-y-4 text-sm text-gray-300">
+          <li class="flex items-start gap-3">
+            <span class="text-red-500 font-bold mt-0.5">✕</span>
+            <span><strong>Falta de Validação:</strong> Criar um material gigante de meses sem saber se o mercado tem real desejo de pagar por ele.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-500 font-bold mt-0.5">✕</span>
+            <span><strong>Complexidade Técnica:</strong> Travar na hora de criar landing pages, registrar domínios pesados ou programar botões de vendas.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-500 font-bold mt-0.5">✕</span>
+            <span><strong>Insegurança na Divulgação:</strong> Criar o material, mas não saber o que postar ou falar para vender, parecendo um vendedor chato.</span>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER CTA -->
-<div class="footer-cta">
-  <div class="container">
-    <h2>Pronto para<br><span class="accent">começar?</span></h2>
-    <a href="https://pay.kiwify.com.br/1hFJ3K4" class="cta-main">Garantir o Vault 10X por R$97</a>
-    <p style="margin-top:16px; font-family: var(--font-mono); font-size:12px; color: var(--muted);">Garantia de 7 dias · Acesso imediato</p>
-  </div>
-</div>
+  <!-- O Conteúdo do Cofre -->
+  <section class="bg-[#0E0E0E] py-16 md:py-24 px-6 border-y border-[#151515]">
+    <div class="max-w-5xl mx-auto space-y-12">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-xs text-brandBlue uppercase tracking-widest font-bold">O ARSENAL COMPLETO</span>
+        <h2 class="text-4xl md:text-6xl font-display font-black uppercase text-white tracking-wide">
+          O QUE ESTÁ DENTRO DO VAULT 10X:
+        </h2>
+      </div>
 
-<!-- FOOTER -->
-<footer>
-  <div class="container">
-    <p>OPERAÇÃO 10X · operacao10x.com · 2025</p>
-  </div>
-</footer>
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Produto 1 -->
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] hover:border-brandLime/30 transition-all flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <span class="font-mono text-[10px] text-brandLime font-bold uppercase tracking-widest bg-brandLime/5 border border-brandLime/10 px-2.5 py-1 rounded">PRODUTO 01</span>
+            <h3 class="font-display text-2xl font-black text-white uppercase leading-none pt-2">FRAMEWORK PRODUTO EM 24H</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-sans">
+              O método acelerado de criação de conteúdo (e-books, guias, checklists) estruturado em blocos e cronograma hora a hora.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="font-mono text-[9px] text-gray-500 bg-[#0E0E0E] border border-[#151515] px-2 py-0.5 rounded">8 Capítulos</span>
+            <span class="font-mono text-[9px] text-gray-500 bg-[#0E0E0E] border border-[#151515] px-2 py-0.5 rounded">Stack Grátis</span>
+          </div>
+        </div>
 
-<!-- STICKY MOBILE CTA -->
-<div class="sticky-cta">
-  <span class="price">R$97</span>
-  <a href="https://pay.kiwify.com.br/1hFJ3K4">Garantir agora</a>
-</div>
+        <!-- Produto 2 -->
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] hover:border-brandBlue/30 transition-all flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <span class="font-mono text-[10px] text-brandBlue font-bold uppercase tracking-widest bg-brandBlue/5 border border-brandBlue/10 px-2.5 py-1 rounded">PRODUTO 02</span>
+            <h3 class="font-display text-2xl font-black text-white uppercase leading-none pt-2">RENDA COM IA EM 30 DIAS</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-sans">
+              Cronograma diário de 4 semanas. Cada dia possui uma tarefa definida e roteiros de abordagem direta via WhatsApp e direct.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="font-mono text-[9px] text-gray-500 bg-[#0E0E0E] border border-[#151515] px-2 py-0.5 rounded">4 Semanas</span>
+            <span class="font-mono text-[9px] text-gray-500 bg-[#0E0E0E] border border-[#151515] px-2 py-0.5 rounded">Ação Diária</span>
+          </div>
+        </div>
+
+        <!-- Produto 3 -->
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] hover:border-brandLime/30 transition-all flex flex-col justify-between space-y-6">
+          <div class="space-y-3">
+            <span class="font-mono text-[10px] text-brandLime font-bold uppercase tracking-widest bg-brandLime/5 border border-brandLime/10 px-2.5 py-1 rounded">PRODUTO 03</span>
+            <h3 class="font-display text-2xl font-black text-white uppercase leading-none pt-2">60 PROMPTS INSTAGRAM</h3>
+            <p class="text-xs text-gray-400 leading-relaxed font-sans">
+              Biblioteca de copias prontas organizadas em 6 categorias de conversão. Hooks de Reels, roteiros de Stories e legendas persuasivas.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-2">
+            <span class="font-mono text-[9px] text-gray-500 bg-[#0E0E0E] border border-[#151515] px-2 py-0.5 rounded">60 Templates</span>
+            <span class="font-mono text-[9px] text-gray-500 bg-[#0E0E0E] border border-[#151515] px-2 py-0.5 rounded">Copiar & Colar</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Value Stack -->
+      <div class="max-w-3xl mx-auto pt-6">
+        <table class="w-full text-left border-collapse border-t border-[#1F1F1F]">
+          <tbody>
+            <tr class="border-b border-[#1F1F1F]">
+              <td class="py-4 font-mono text-xs text-brandLime">✓</td>
+              <td class="py-4 text-xs font-mono text-gray-300">Framework Produto em 24H</td>
+              <td class="py-4 text-right font-mono text-xs text-gray-600 line-through">R$ 47</td>
+            </tr>
+            <tr class="border-b border-[#1F1F1F]">
+              <td class="py-4 font-mono text-xs text-brandLime">✓</td>
+              <td class="py-4 text-xs font-mono text-gray-300">Renda com IA em 30 Dias</td>
+              <td class="py-4 text-right font-mono text-xs text-gray-600 line-through">R$ 37</td>
+            </tr>
+            <tr class="border-b border-[#1F1F1F]">
+              <td class="py-4 font-mono text-xs text-brandLime">✓</td>
+              <td class="py-4 text-xs font-mono text-gray-300">60 Prompts para Instagram</td>
+              <td class="py-4 text-right font-mono text-xs text-gray-600 line-through">R$ 37</td>
+            </tr>
+            <tr class="border-b border-[#1F1F1F]">
+              <td class="py-4 font-mono text-xs text-brandLime">✓</td>
+              <td class="py-4 text-xs font-mono text-gray-300">Guia de Boas-Vindas e Manual de Prompting</td>
+              <td class="py-4 text-right font-mono text-xs text-gray-600 line-through">R$ 27</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="flex items-center justify-between bg-black p-5 rounded-xl border border-[#1A1A1A] mt-6">
+          <span class="font-mono text-xs text-gray-400 uppercase tracking-widest font-bold">VALOR INDIVIDUAL TOTAL:</span>
+          <span class="font-mono text-sm text-gray-500 line-through">R$ 148</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Para Quem É -->
+  <section class="py-16 md:py-24 px-6 max-w-5xl mx-auto">
+    <div class="text-center space-y-2 mb-12">
+      <span class="font-mono text-xs text-brandLime uppercase tracking-widest font-bold">PÚBLICO ALVO</span>
+      <h2 class="text-3xl md:text-5xl font-display font-black uppercase text-white tracking-wide">
+        ESTE KIT FOI DESENHADO <span class="text-brandBlue text-glow-blue">PARA VOCÊ?</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-[#0E0E0E] p-8 rounded-xl border border-brandLime/20 space-y-6 box-glow-lime">
+        <h4 class="font-mono text-xs text-brandLime uppercase tracking-wider font-bold">FAZ SENTIDO SE VOCÊ QUER:</h4>
+        <ul class="space-y-4 text-xs text-gray-300">
+          <li class="flex items-start gap-3">
+            <span class="text-brandLime font-bold mt-0.5">→</span>
+            <span>Criar uma renda extra recorrente vendendo e-books ou checklists estruturados por IA.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brandLime font-bold mt-0.5">→</span>
+            <span>Aprender a usar o ChatGPT e o Claude de forma estratégica para gerar ativos e copias de vendas.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-brandLime font-bold mt-0.5">→</span>
+            <span>Economizar tempo e dinheiro evitando comprar ferramentas caras antes do primeiro faturamento.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="bg-[#0E0E0E] p-8 rounded-xl border-red-950/40 border space-y-6 box-glow-red">
+        <h4 class="font-mono text-xs text-red-500 uppercase tracking-wider font-bold">NÃO FAZ SENTIDO SE VOCÊ:</h4>
+        <ul class="space-y-4 text-xs text-gray-300">
+          <li class="flex items-start gap-3">
+            <span class="text-red-500 font-bold mt-0.5">→</span>
+            <span>Acredita em fórmulas mágicas de enriquecimento sem esforce prático ou aplicação.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-red-500 font-bold mt-0.5">→</span>
+            <span>Já é um infoprodutor experiente com funis e faturamento sólido de múltiplos 6 dígitos.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="bg-[#0E0E0E] py-16 md:py-24 px-6 border-t border-[#111]">
+    <div class="max-w-4xl mx-auto space-y-10">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-xs text-gray-500 uppercase tracking-widest">DÚVIDAS FREQUENTES</span>
+        <h2 class="text-3xl md:text-5xl font-display font-black uppercase text-white tracking-wide">
+          RESPOSTAS DIRETAS SEM ENROLAÇÃO
+        </h2>
+      </div>
+
+      <div class="grid gap-4">
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-2">
+          <h4 class="font-mono text-sm text-brandLime font-bold">"NÃO TENHO TEMPO PARA MAIS UM CURSO."</h4>
+          <p class="text-xs text-gray-400 leading-relaxed font-sans">
+            O Vault 10X é 100% focado em execução prática. O Framework de 24 horas pode ser consumido e aplicado em um único fim de semana — sem teoria inútil.
+          </p>
+        </div>
+
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-2">
+          <h4 class="font-mono text-sm text-brandLime font-bold">"PRECISO DE CONHECIMENTO TÉCNICO AVANÇADO?"</h4>
+          <p class="text-xs text-gray-400 leading-relaxed font-sans">
+            Não. O material ensina a montar tudo usando ferramentas gratuitas com interfaces simples do tipo arrastar e soltar. Não precisa saber programar nada.
+          </p>
+        </div>
+
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-2">
+          <h4 class="font-mono text-sm text-brandLime font-bold">"TENHO QUE PAGAR ASSINATURAS ADICIONAIS?"</h4>
+          <p class="text-xs text-gray-400 leading-relaxed font-sans">
+            Não. Todo o funil de vendas, as Inteligências Artificiais e os meios de pagamento recomendados são configurados no plano gratuito das ferramentas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout Block -->
+  <section id="checkout-section" class="py-16 md:py-24 px-6 max-w-3xl mx-auto text-center space-y-10">
+    <div class="space-y-4">
+      <span class="font-mono text-xs text-gray-500 uppercase tracking-widest">OFERTA ÚNICA SEM ASSINATURA • COFRE ATIVO</span>
+      <div class="flex items-baseline justify-center gap-3">
+        <span class="text-lg font-mono text-gray-600 line-through">R$ 148</span>
+        <span class="text-6xl md:text-7xl font-display font-black text-white text-glow-lime">R$ 97</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-400 max-w-md mx-auto leading-relaxed">
+        Não adie mais o seu ativo digital. Economize 65% levando todos os 3 guias e o bônus hoje por um pagamento único.
+      </p>
+    </div>
+
+    <!-- Botão Principal de Checkout -->
+    <div class="space-y-4">
+      <a href="https://pay.kiwify.com.br/1hFJ3K4" target="_blank" class="block w-full py-5 bg-brandLime hover:bg-lime-400 text-black font-display font-black text-2xl tracking-wider uppercase italic transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(200,255,0,0.3)]">
+        GARANTIR ACESSO POR R$ 97 COMPLETO
+      </a>
+      <p class="text-[10px] font-mono text-gray-500 uppercase">✓ Você será redirecionado para a plataforma de pagamento seguro da Kiwify</p>
+    </div>
+
+    <!-- Garantia e Segurança -->
+    <div class="grid sm:grid-cols-2 gap-4 pt-6 border-t border-[#111] text-left font-mono text-[10px] text-gray-500">
+      <div class="flex gap-3 items-start bg-[#0E0E0E] p-4 rounded-lg border border-[#151515]">
+        <span class="text-brandLime font-bold text-base">🛡</span>
+        <div>
+          <p class="font-bold text-white uppercase">GARANTIA INCONDICIONAL DE 7 DIAS</p>
+          <p class="mt-0.5 leading-relaxed">Abra os materiais, explore os prompts e cronogramas. Se achar que não serve para o seu momento, devolvemos todo o seu investimento.</p>
+        </div>
+      </div>
+      <div class="flex gap-3 items-start bg-[#0E0E0E] p-4 rounded-lg border border-[#151515]">
+        <span class="text-brandBlue font-bold text-base">🔒</span>
+        <div>
+          <p class="font-bold text-white uppercase">AMBIENTE CRIPTOGRAFADO</p>
+          <p class="mt-0.5 leading-relaxed">Transação 100% segura intermediada pela Kiwify, a maior plataforma de micro-produtos digitais do Brasil.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-8 px-6 text-center text-xs text-gray-600 border-t border-[#111] font-mono">
+    <p>© 2026 Operação 10X. Todos os direitos reservados.</p>
+    <p class="mt-1 text-[10px] text-gray-700">Este site não faz parte do Facebook, Google ou Kiwify. Os resultados variam de acordo com cada aplicador.</p>
+  </footer>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#0A0A0A]/90 backdrop-blur-md border-t border-[#1A1A1A] p-4 flex items-center justify-between z-50">
+    <div>
+      <span class="block font-mono text-[9px] text-gray-500 uppercase">VALOR COMPLETO</span>
+      <span class="text-2xl font-display font-black text-brandLime">R$ 97</span>
+    </div>
+    <a href="#checkout-section" class="px-5 py-2.5 bg-brandLime text-black font-display font-black uppercase text-sm italic tracking-wider">
+      GARANTIR AGORA
+    </a>
+  </div>
 
 </body>
 </html>
