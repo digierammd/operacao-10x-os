@@ -1,442 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lance seu Produto Digital em Apenas 7 Dias</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0A0A0A;
-    --bg-card:#141414;
-    --bg-card-2:#1A1A1A;
-    --line:#262626;
-    --lime:#C8FF00;
-    --blue:#00D4FF;
-    --text:#EDEDED;
-    --text-dim:#8A8A8A;
-    --text-dimmer:#5A5A5A;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter',sans-serif;
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
-  .display{font-family:'Big Shoulders Display',sans-serif;font-weight:800;letter-spacing:-0.01em;text-transform:uppercase;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
-
-  /* ---------- nav ---------- */
-  nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(10,10,10,0.85);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .logo{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:0.02em;}
-  .logo span{color:var(--blue);}
-  .nav-cta{
-    background:var(--blue);color:#0A0A0A;font-weight:700;font-size:13px;
-    padding:10px 20px;border-radius:4px;text-decoration:none;
-    font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;
-  }
-
-  /* ---------- hero ---------- */
-  .hero{padding:80px 0 60px;position:relative;overflow:hidden;}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);
-    border:1px solid rgba(0,212,255,0.3);background:rgba(0,212,255,0.06);
-    padding:6px 14px;border-radius:100px;margin-bottom:28px;letter-spacing:0.04em;
-  }
-  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 8px var(--blue);}
-  h1{
-    font-size:clamp(40px,6.2vw,76px);
-    line-height:0.96;
-    margin-bottom:24px;
-    max-width:880px;
-  }
-  h1 .accent{color:var(--blue);}
-  .subhead{
-    font-size:19px;color:var(--text-dim);max-width:620px;margin-bottom:40px;line-height:1.6;
-  }
-  .hero-ctas{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:56px;}
-  .btn-primary{
-    background:var(--blue);color:#0A0A0A;font-weight:700;font-size:16px;
-    padding:18px 36px;border-radius:6px;text-decoration:none;display:inline-block;
-    transition:transform 0.15s ease;
-  }
-  .btn-primary:hover{transform:translateY(-2px);}
-  .price-tag{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--text-dim);}
-  .price-tag b{color:var(--text);font-size:18px;}
-
-  /* day strip signature */
-  .day-strip{display:flex;gap:3px;margin-bottom:8px;}
-  .day-block{
-    height:28px;flex:1;background:var(--bg-card-2);border-radius:2px;
-  }
-  .day-block.lit{background:var(--blue);}
-  .day-label{
-    display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;
-    font-size:11px;color:var(--text-dimmer);margin-bottom:48px;letter-spacing:0.03em;
-  }
-
-  /* ---------- problem ---------- */
-  .section{padding:72px 0;border-top:1px solid var(--line);}
-  .section-label{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--lime);
-    letter-spacing:0.08em;margin-bottom:16px;text-transform:uppercase;
-  }
-  h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:20px;max-width:680px;line-height:1.05;}
-  .lead{font-size:17px;color:var(--text-dim);max-width:620px;margin-bottom:8px;}
-
-  .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:40px;border-radius:8px;overflow:hidden;}
-  .problem-item{background:var(--bg);padding:28px 24px;}
-  .problem-item .num{font-family:'IBM Plex Mono',monospace;color:var(--text-dimmer);font-size:12px;margin-bottom:12px;}
-  .problem-item p{font-size:15px;color:var(--text-dim);line-height:1.55;}
-  .problem-item strong{color:var(--text);display:block;margin-bottom:6px;font-size:16px;}
-
-  /* ---------- timeline signature ---------- */
-  .mechanism{padding:72px 0;border-top:1px solid var(--line);}
-  .timeline{
-    position:relative;margin-top:56px;padding-top:8px;
-  }
-  .timeline-track{
-    position:absolute;top:18px;left:0;right:0;height:2px;background:var(--line);
-  }
-  .timeline-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;position:relative;}
-  .tl-node{
-    width:36px;height:36px;border-radius:50%;background:var(--bg-card);border:2px solid var(--blue);
-    display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;
-    font-size:13px;font-weight:600;color:var(--blue);margin-bottom:20px;position:relative;z-index:2;
-  }
-  .tl-card{
-    background:var(--bg-card);border:1px solid var(--line);border-radius:10px;padding:24px 20px;
-  }
-  .tl-card .day-range{
-    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-dimmer);margin-bottom:10px;display:block;
-  }
-  .tl-card h3{font-size:18px;margin-bottom:8px;font-weight:700;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0;}
-  .tl-card p{font-size:14px;color:var(--text-dim);line-height:1.5;}
-
-  /* ---------- offer / value stack ---------- */
-  .offer{padding:80px 0;border-top:1px solid var(--line);background:var(--bg-card);}
-  .offer-box{
-    max-width:640px;margin:0 auto;background:var(--bg);border:1px solid var(--line);border-radius:14px;
-    padding:48px;
-  }
-  .offer-box h2{text-align:center;margin:0 auto 8px;font-size:30px;}
-  .offer-sub{text-align:center;color:var(--text-dim);font-size:15px;margin-bottom:36px;}
-  .stack-list{list-style:none;margin-bottom:32px;}
-  .stack-list li{
-    display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);
-  }
-  .stack-list li:last-child{border-bottom:none;}
-  .check{
-    width:20px;height:20px;border-radius:50%;background:rgba(0,212,255,0.12);color:var(--blue);
-    display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:2px;font-weight:700;
-  }
-  .stack-list span{font-size:15px;color:var(--text);}
-  .stack-list small{display:block;color:var(--text-dim);font-size:13px;margin-top:2px;}
-
-  .price-block{text-align:center;padding-top:8px;}
-  .price-old{font-family:'IBM Plex Mono',monospace;color:var(--text-dimmer);text-decoration:line-through;font-size:16px;}
-  .price-new{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:56px;color:var(--blue);line-height:1;margin:6px 0 4px;}
-  .price-installment{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text-dim);margin-bottom:28px;}
-  .btn-offer{
-    display:block;width:100%;text-align:center;background:var(--blue);color:#0A0A0A;
-    font-weight:700;font-size:17px;padding:20px;border-radius:8px;text-decoration:none;margin-bottom:16px;
-  }
-  .guarantee{
-    display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:var(--text-dim);
-    font-family:'IBM Plex Mono',monospace;
-  }
-
-  /* ---------- no-improviso strip ---------- */
-  .promise-strip{
-    display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-top:48px;
-    border:1px solid var(--line);border-radius:10px;overflow:hidden;
-  }
-  .promise-item{
-    flex:1;min-width:160px;text-align:center;padding:22px 16px;border-right:1px solid var(--line);
-    font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text-dim);
-  }
-  .promise-item:last-child{border-right:none;}
-  .promise-item b{display:block;color:var(--text);font-size:15px;margin-bottom:4px;font-family:'Inter',sans-serif;font-weight:700;}
-
-  /* ---------- cross-sell ---------- */
-  .cross-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;
-  }
-  .cross-card{
-    background:var(--bg-card);border:1px solid var(--line);border-radius:12px;
-    padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;
-  }
-  .cross-card-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--lime);letter-spacing:0.06em;display:block;margin-bottom:8px;}
-  .cross-card-text h3{font-size:19px;margin-bottom:8px;font-weight:700;}
-  .cross-card-text p{font-size:14px;color:var(--text-dim);line-height:1.55;}
-  .cross-card-link{
-    background:transparent;border:1px solid var(--lime);color:var(--lime);font-family:'IBM Plex Mono',monospace;
-    font-size:13px;font-weight:600;padding:14px 20px;border-radius:6px;text-decoration:none;white-space:nowrap;
-    text-align:center;
-  }
-
-  /* ---------- faq ---------- */
-  .faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
-  .faq-item summary{font-size:17px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary::after{content:"+";font-family:'IBM Plex Mono',monospace;color:var(--lime);font-size:20px;}
-  .faq-item[open] summary::after{content:"−";}
-  .faq-item p{margin-top:14px;color:var(--text-dim);font-size:15px;line-height:1.6;max-width:680px;}
-
-  /* ---------- final cta ---------- */
-  .final-cta{padding:90px 0;text-align:center;border-top:1px solid var(--line);}
-  .final-cta h2{margin:0 auto 16px;max-width:620px;text-align:center;}
-  .final-cta .lead{margin:0 auto 36px;text-align:center;}
-
-  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;}
-  footer p{font-size:13px;color:var(--text-dimmer);font-family:'IBM Plex Mono',monospace;}
-
-  @media (max-width:760px){
-    .problem-grid{grid-template-columns:1fr;}
-    .timeline-row{grid-template-columns:1fr 1fr;}
-    .offer-box{padding:32px 24px;}
-    .promise-item{border-right:none;border-bottom:1px solid var(--line);}
-    .promise-item:last-child{border-bottom:none;}
-    .cross-grid{grid-template-columns:1fr;}
-  }
-  @media (max-width:520px){
-    .timeline-row{grid-template-columns:1fr;}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit Lançamento 7 Dias | Operação 10X</title>
+  
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0A0A0A',
+            brandLime: '#C8FF00',
+            brandBlue: '#00D4FF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Big Shoulders Display"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #F3F4F6;
+    }
+    .text-glow-blue {
+      text-shadow: 0 0 15px rgba(0, 212, 255, 0.45);
+    }
+    .box-glow-blue {
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.08);
+    }
+  </style>
 </head>
-<body>
+<body class="font-sans antialiased overflow-x-hidden">
 
-<nav>
-  <div class="wrap">
-    <div class="logo">OPERAÇÃO <span>10X</span></div>
-    <a href="https://pay.kiwify.com.br/cZROvtM" class="nav-cta">QUERO LANÇAR</a>
+  <!-- Header / Barra de Escassez -->
+  <div class="bg-black border-b border-[#1A1A1A] py-3 px-4 text-center">
+    <p class="font-mono text-xs text-brandBlue uppercase tracking-widest font-bold">
+      ⚡ CRONOGRAMA OPERACIONAL ATIVO • ADQUIRA O ROTEIRO COMPLETO PARA LANÇAR EM 7 DIAS
+    </p>
   </div>
-</nav>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">KIT DE LANÇAMENTO · 7 DIAS</div>
-    <h1>Pare de adiar.<br>Coloque seu produto<br>no mercado em <span class="accent">7 dias.</span></h1>
-    <p class="subhead">O roteiro dia a dia para lançar, divulgar para o público certo e conquistar os primeiros compradores — sem improvisar e sem travar.</p>
+  <!-- Hero Section -->
+  <header class="relative pt-12 pb-16 md:pt-20 md:pb-24 px-6 border-b border-[#111]">
+    <!-- Background Accents -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(0,212,255,0.06),transparent_50%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(200,255,0,0.04),transparent_50%)] pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+      <span class="inline-block font-mono text-xs tracking-[0.25em] text-brandBlue uppercase font-bold bg-brandBlue/10 px-4 py-2 rounded-full border border-brandBlue/20">
+        ⚡ CRONOGRAMA OPERACIONAL SEMANAL
+      </span>
+      
+      <h1 class="text-5xl sm:text-7xl md:text-8xl font-display font-black uppercase leading-none tracking-tight text-white">
+        COMO VENDER SEU PRIMEIRO INFOPRODUTO EM <span class="text-brandBlue text-glow-blue">APENAS 7 DIAS</span> COM ORGÂNICO E IA
+      </h1>
+      
+      <p class="text-base sm:text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+        Não espere construir uma audiência gigante ou gastar milhares de reais com tráfego pago para ver os seus primeiros resultados. Siga o nosso roteiro cirúrgico passo a passo diariamente.
+      </p>
 
-    <div class="day-strip" aria-hidden="true">
-      <div class="day-block lit"></div>
-      <div class="day-block lit"></div>
-      <div class="day-block lit"></div>
-      <div class="day-block lit"></div>
-      <div class="day-block lit"></div>
-      <div class="day-block lit"></div>
-      <div class="day-block lit"></div>
-    </div>
-    <div class="day-label">
-      <span>DIA 1 → DIA 7</span>
-      <span>4 FASES</span>
-    </div>
-
-    <div class="hero-ctas">
-      <a href="https://pay.kiwify.com.br/cZROvtM" class="btn-primary">Quero meu roteiro de 7 dias →</a>
-      <span class="price-tag">a partir de <b>R$ 47</b> · acesso imediato</span>
-    </div>
-  </div>
-</header>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-label">O PROBLEMA</div>
-    <h2>Você tem o produto. O que falta é saber o que fazer hoje.</h2>
-    <p class="lead">Sem um cronograma claro, cada dia vira uma decisão nova sobre o que postar, quando abrir o carrinho e como não deixar a audiência esfriar.</p>
-
-    <div class="problem-grid">
-      <div class="problem-item">
-        <div class="num">01</div>
-        <strong>Lançamento sem ordem</strong>
-        <p>Posta sem sequência, sem aquecimento — e a audiência não chega aquecida na hora da oferta.</p>
-      </div>
-      <div class="problem-item">
-        <div class="num">02</div>
-        <strong>Copy do zero, toda vez</strong>
-        <p>Perde horas tentando escrever cada post, story e e-mail sem ter um ponto de partida.</p>
-      </div>
-      <div class="problem-item">
-        <div class="num">03</div>
-        <strong>Carrinho aberto sem estratégia</strong>
-        <p>Abre as vendas e não sabe como fechar com urgência real, sem parecer forçado.</p>
+      <div class="pt-6">
+        <a href="#checkout-section" class="inline-block px-8 py-5 bg-brandBlue hover:bg-cyan-400 text-black font-display font-black text-xl md:text-2xl tracking-wider uppercase italic transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(0,212,255,0.25)] hover:shadow-[0_0_40px_rgba(0,212,255,0.45)]">
+          QUERO MEU CRONOGRAMA DE 7 DIAS
+        </a>
+        <div class="mt-4 flex items-center justify-center gap-4 text-xs font-mono text-gray-500">
+          <span>✓ Scripts Prontos</span>
+          <span>•</span>
+          <span>✓ Roteiros Valinados</span>
+          <span>•</span>
+          <span>✓ Copiar & Colar</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="mechanism">
-  <div class="wrap">
-    <div class="section-label">O MÉTODO</div>
-    <h2>4 fases. 7 dias. Um cronograma para seguir, não para inventar.</h2>
-    <p class="lead">Cada dia já vem com o que fazer — você só preenche e publica.</p>
+  <!-- 7 Days Step-by-Step Map -->
+  <section class="py-16 md:py-24 px-6 max-w-6xl mx-auto space-y-12">
+    <div class="text-center space-y-2">
+      <span class="font-mono text-xs text-brandLime uppercase tracking-widest font-bold">O CRONOGRAMA DA SEMANA</span>
+      <h2 class="text-3xl md:text-5xl font-display font-black uppercase text-white tracking-wide">
+        7 DIAS, 7 ETAPAS EXECUTÁVEIS PARA AS VENDAS
+      </h2>
+    </div>
 
-    <div class="timeline">
-      <div class="timeline-row">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-7 gap-4">
+      <div class="bg-[#0E0E0E] p-4 rounded-xl border border-[#151515] space-y-2 hover:border-brandBlue/30 transition-colors">
+        <span class="block font-mono text-xs text-brandBlue font-bold uppercase">DIA 01</span>
+        <h4 class="font-display text-lg font-bold text-white uppercase">POSICIONAMENTO</h4>
+        <p class="text-[11px] text-gray-400 font-sans leading-relaxed">Encontre o ângulo matador de cópia focado na dor imediata da sua audiência.</p>
+      </div>
+
+      <div class="bg-[#0E0E0E] p-4 rounded-xl border border-[#151515] space-y-2 hover:border-brandBlue/30 transition-colors">
+        <span class="block font-mono text-xs text-brandBlue font-bold uppercase">DIA 02</span>
+        <h4 class="font-display text-lg font-bold text-white uppercase">AQUECIMENTO</h4>
+        <p class="text-[11px] text-gray-400 font-sans leading-relaxed">Ative o radar de atenção do seu público de forma sutil nos Stories e Status.</p>
+      </div>
+
+      <div class="bg-[#0E0E0E] p-4 rounded-xl border border-[#151515] space-y-2 hover:border-brandBlue/30 transition-colors">
+        <span class="block font-mono text-xs text-brandBlue font-bold uppercase">DIA 03</span>
+        <h4 class="font-display text-lg font-bold text-white uppercase">CONEXÃO</h4>
+        <p class="text-[11px] text-gray-400 font-sans leading-relaxed">Mostre a oportunidade gerada pela sua solução de forma irresistível.</p>
+      </div>
+
+      <div class="bg-[#0E0E0E] p-4 rounded-xl border border-[#151515] space-y-2 hover:border-brandBlue/30 transition-colors">
+        <span class="block font-mono text-xs text-brandBlue font-bold uppercase">DIA 04</span>
+        <h4 class="font-display text-lg font-bold text-white uppercase">ANTECIPAÇÃO</h4>
+        <p class="text-[11px] text-gray-400 font-sans leading-relaxed">Libere o lote especial de pré-venda limitada com bônus exclusivos.</p>
+      </div>
+
+      <div class="bg-[#0E0E0E] p-4 rounded-xl border border-[#151515] space-y-2 hover:border-brandBlue/30 transition-colors">
+        <span class="block font-mono text-xs text-brandBlue font-bold uppercase">DIA 05</span>
+        <h4 class="font-display text-lg font-bold text-white uppercase">ABERTURA</h4>
+        <p class="text-[11px] text-gray-400 font-sans leading-relaxed">Libere o checkout com escassez de bônus nas primeiras 24 horas.</p>
+      </div>
+
+      <div class="bg-[#0E0E0E] p-4 rounded-xl border border-[#151515] space-y-2 hover:border-brandBlue/30 transition-colors">
+        <span class="block font-mono text-xs text-brandBlue font-bold uppercase">DIA 06</span>
+        <h4 class="font-display text-lg font-bold text-white uppercase">QUEBRA OBJEÇÃO</h4>
+        <p class="text-[11px] text-gray-400 font-sans leading-relaxed">Responda às maiores dúvidas e mate os medos do seu cliente.</p>
+      </div>
+
+      <div class="bg-[#0E0E0E] p-4 rounded-xl border border-[#151515] space-y-2 hover:border-brandBlue/30 transition-colors">
+        <span class="block font-mono text-xs text-brandBlue font-bold uppercase">DIA 07</span>
+        <h4 class="font-display text-lg font-bold text-white uppercase">FECHAMENTO</h4>
+        <p class="text-[11px] text-gray-400 font-sans leading-relaxed">Gatilho de escassez máxima para encerramento das vagas às 23:59h.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- O Conteúdo / O que você leva -->
+  <section class="bg-[#0E0E0E] py-16 md:py-24 px-6 border-y border-[#151515]">
+    <div class="max-w-4xl mx-auto space-y-12">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-xs text-brandLime uppercase tracking-widest font-bold">CONTEÚDO DO KIT</span>
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase text-white tracking-wide">
+          O SEU PROTOCOLO COMPLETO DE LANÇAMENTO
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandBlue font-bold">01 • SCRIPTS DE STORYTELLING PARA STORIES</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Roteiros de copy exatos, bastando apenas preencher as lacunas com seu nicho. Criados para gerar visualizações qualificadas e conversões de compra imediatas.
+          </p>
+        </div>
+
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandBlue font-bold">02 • ESTRUTURA COMPLETA DE REELS E REELS-TRACTION</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Ideias e ganchos de vídeos rápidos de alta performance para aquecer novos leads que nunca te viram antes, guiando-os diretamente para a sua oferta.
+          </p>
+        </div>
+
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandBlue font-bold">03 • PLANILHA DE CRONOGRAMA DE DISPAROS DE WHATSAPP</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Mensagens de relacionamento, antecipação, quebra de objeções e lembretes de última hora para você enviar diretamente nos grupos ou de forma individual.
+          </p>
+        </div>
+
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandBlue font-bold">04 • ROTEIRO COMPLETO PARA PÁGINAS DE VENDA</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Manual rápido contendo a exata espinha dorsal psicológica para construir a copy da sua página de vendas garantindo máxima retenção e desejo do visitante.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Checkout & Garantia Block -->
+  <section id="checkout-section" class="py-16 md:py-24 px-6 max-w-3xl mx-auto text-center space-y-10">
+    <div class="space-y-4">
+      <span class="font-mono text-xs text-gray-500 uppercase tracking-widest">OFERTA ÚNICA SEM ASSINATURA</span>
+      <div class="flex items-baseline justify-center gap-3">
+        <span class="text-lg font-mono text-gray-600 line-through">R$ 197</span>
+        <span class="text-6xl md:text-7xl font-display font-black text-white text-glow-blue">R$ 47</span>
+      </div>
+      <p class="text-xs sm:text-sm text-gray-400 max-w-md mx-auto">
+        Chega de travar no lançamento. Economize tempo e dinheiro precioso acessando o manual passo a passo de quem já validou e vende todos os dias de forma enxuta.
+      </p>
+    </div>
+
+    <!-- Botão Principal de Checkout -->
+    <div class="space-y-4">
+      <a href="https://pay.kiwify.com.br/xxxxx" target="_blank" class="block w-full py-5 bg-brandBlue hover:bg-cyan-400 text-black font-display font-black text-2xl tracking-wider uppercase italic transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(0,212,255,0.3)]">
+        COMPRAR AGORA • ACESSO IMEDIATO
+      </a>
+      <p class="text-[10px] font-mono text-gray-500 uppercase">✓ Você será redirecionado para a plataforma de pagamento seguro da Kiwify</p>
+    </div>
+
+    <!-- Garantia e Segurança -->
+    <div class="grid sm:grid-cols-2 gap-4 pt-6 border-t border-[#111] text-left font-mono text-[10px] text-gray-500">
+      <div class="flex gap-3 items-start bg-[#0E0E0E] p-4 rounded-lg border border-[#151515]">
+        <span class="text-brandBlue font-bold text-base">🛡</span>
         <div>
-          <div class="tl-node">01</div>
-          <div class="tl-card">
-            <span class="day-range">DIA 1 — 2</span>
-            <h3>Aquecimento</h3>
-            <p>Scripts prontos para gerar curiosidade e preparar a audiência antes da oferta aparecer.</p>
-          </div>
+          <p class="font-bold text-white uppercase">GARANTIA INCONDICIONAL DE 7 DIAS</p>
+          <p class="mt-0.5 leading-relaxed">Se por algum motivo você achar que não é para você, basta solicitar o reembolso em até 7 dias e devolvemos cada centavo.</p>
         </div>
+      </div>
+      <div class="flex gap-3 items-start bg-[#0E0E0E] p-4 rounded-lg border border-[#151515]">
+        <span class="text-brandLime font-bold text-base">🔒</span>
         <div>
-          <div class="tl-node">02</div>
-          <div class="tl-card">
-            <span class="day-range">DIA 3 — 4</span>
-            <h3>Construção de desejo</h3>
-            <p>Conteúdo que mostra a transformação do produto sem ainda vender diretamente.</p>
-          </div>
-        </div>
-        <div>
-          <div class="tl-node">03</div>
-          <div class="tl-card">
-            <span class="day-range">DIA 5 — 6</span>
-            <h3>Abertura de carrinho</h3>
-            <p>Scripts de abertura com a oferta completa, prontos para publicar.</p>
-          </div>
-        </div>
-        <div>
-          <div class="tl-node">04</div>
-          <div class="tl-card">
-            <span class="day-range">DIA 7</span>
-            <h3>Fechamento</h3>
-            <p>Sequência de urgência e escassez real para converter quem ainda está decidindo.</p>
-          </div>
+          <p class="font-bold text-white uppercase">SISTEMA 100% CRIPTOGRAFADO</p>
+          <p class="mt-0.5 leading-relaxed">Sua compra é processada com a segurança máxima de criptografia SSL da Kiwify, garantindo sigilo absoluto dos seus dados.</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="offer">
-  <div class="wrap">
-    <div class="offer-box">
-      <h2>O que você recebe</h2>
-      <p class="offer-sub">Kit Lançamento em 7 Dias — Operação 10X</p>
-
-      <ul class="stack-list">
-        <li>
-          <span class="check">✓</span>
-          <span>Cronograma dia a dia das 4 fases<small>Saiba exatamente o que fazer em cada um dos 7 dias</small></span>
-        </li>
-        <li>
-          <span class="check">✓</span>
-          <span>12 templates de copy prontos<small>Só preencher com os dados do seu produto e publicar</small></span>
-        </li>
-        <li>
-          <span class="check">✓</span>
-          <span>Checklist mestre do lançamento<small>Para não esquecer nenhuma etapa pelo caminho</small></span>
-        </li>
-        <li>
-          <span class="check">✓</span>
-          <span>Scripts de aquecimento, abertura e fechamento<small>Prontos para adaptar ao seu tom de voz</small></span>
-        </li>
-        <li>
-          <span class="check">✓</span>
-          <span>Acesso imediato após a compra<small>Material em PDF, comece hoje</small></span>
-        </li>
-      </ul>
-
-      <div class="price-block">
-        <div class="price-old mono">de R$ 97</div>
-        <div class="price-new">R$ 47</div>
-        <div class="price-installment">ou em até 12x no cartão</div>
-        <a href="https://pay.kiwify.com.br/cZROvtM" class="btn-offer">Quero lançar em 7 dias →</a>
-        <div class="guarantee">🔒 Garantia incondicional de 7 dias</div>
-      </div>
-    </div>
-
-    <div class="promise-strip">
-      <div class="promise-item"><b>Sem improvisar</b>roteiro pronto</div>
-      <div class="promise-item"><b>Sem travar</b>passo a passo claro</div>
-      <div class="promise-item"><b>Só seguir e publicar</b>copy já escrita</div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-label">PARA COMPLEMENTAR SEU LANÇAMENTO</div>
-    <h2>Ainda não tem o produto? Ou quer escrever mais rápido?</h2>
-    <p class="lead">Dois caminhos que se conectam direto com o cronograma de 7 dias.</p>
-
-    <div class="cross-grid">
-      <div class="cross-card">
-        <div class="cross-card-text">
-          <span class="cross-card-tag">SE AINDA NÃO TEM PRODUTO</span>
-          <h3>Crie seu Primeiro Produto Digital em 24 Horas</h3>
-          <p>Valide, crie e publique o produto que você vai lançar usando este kit — em até 24 horas, com IA gratuita.</p>
-        </div>
-        <a href="https://digierammd.github.io/operacao-10x-os/produto-24h/" class="cross-card-link">Ver o framework de 24h →</a>
-      </div>
-      <div class="cross-card">
-        <div class="cross-card-text">
-          <span class="cross-card-tag">PARA ESCREVER MAIS RÁPIDO</span>
-          <h3>35 Modelos Prontos para Escrever Textos que Vendem</h3>
-          <p>Os 12 templates do kit cobrem o cronograma de 7 dias. Esses 35 modelos ampliam para qualquer texto de venda que você precisar depois.</p>
-        </div>
-        <a href="https://digierammd.github.io/operacao-10x-os/35-templates/" class="cross-card-link">Ver os 35 modelos →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-label">PERGUNTAS FREQUENTES</div>
-    <h2 style="margin-bottom:36px;">Antes de decidir</h2>
-
-    <details class="faq-item" open>
-      <summary>Preciso já ter um produto pronto?</summary>
-      <p>Sim, o kit é focado na fase de lançamento. Se ainda não tem o produto, recomendamos primeiro o Framework Produto em 24H.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Funciona para qualquer tipo de produto digital?</summary>
-      <p>Sim. Os templates e scripts são adaptáveis a ebooks, packs, templates, frameworks ou qualquer infoproduto.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Preciso já ter audiência?</summary>
-      <p>O cronograma funciona tanto para quem já tem seguidores quanto para quem está começando do zero — o foco é construir aquecimento dentro da própria janela de 7 dias.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Como recebo o material?</summary>
-      <p>Acesso liberado imediatamente após a confirmação do pagamento, direto na plataforma Kiwify.</p>
-    </details>
-    <details class="faq-item">
-      <summary>E se não funcionar para mim?</summary>
-      <p>Garantia incondicional de 7 dias. Se não fizer sentido pra você, devolução total, sem perguntas.</p>
-    </details>
-  </div>
-</section>
-
-<section class="final-cta">
-  <div class="wrap">
-    <div class="section-label" style="text-align:center;">ÚLTIMA CHAMADA</div>
-    <h2>Daqui a 7 dias seu produto pode estar no ar — ou exatamente onde está hoje.</h2>
-    <p class="lead">A diferença é seguir o roteiro a partir de agora.</p>
-    <a href="https://pay.kiwify.com.br/cZROvtM" class="btn-primary">Quero meu roteiro de 7 dias →</a>
-  </div>
-</section>
-
-<footer>
-  <p>OPERAÇÃO 10X © 2026 · PRODUTO DIGITAL · GARANTIA DE 7 DIAS</p>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-black py-8 px-6 text-center text-xs text-gray-600 border-t border-[#111] font-mono">
+    <p>© 2026 Operação 10X. Todos os direitos reservados.</p>
+    <p class="mt-1 text-[10px] text-gray-700">Este site não faz parte do Facebook, Google ou Kiwify. Os resultados variam de acordo com cada aplicador.</p>
+  </footer>
 
 </body>
 </html>

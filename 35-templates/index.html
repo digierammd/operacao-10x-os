@@ -1,435 +1,217 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>35 Modelos Prontos para Escrever Textos que Vendem</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bg:#0A0A0A;
-    --bg-card:#141414;
-    --bg-card-2:#1A1A1A;
-    --line:#262626;
-    --lime:#C8FF00;
-    --blue:#00D4FF;
-    --text:#EDEDED;
-    --text-dim:#8A8A8A;
-    --text-dimmer:#5A5A5A;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    background:var(--bg);
-    color:var(--text);
-    font-family:'Inter',sans-serif;
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
-  .display{font-family:'Big Shoulders Display',sans-serif;font-weight:800;letter-spacing:-0.01em;text-transform:uppercase;}
-  .mono{font-family:'IBM Plex Mono',monospace;}
-
-  /* ---------- nav ---------- */
-  nav{
-    position:sticky;top:0;z-index:50;
-    background:rgba(10,10,10,0.85);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;}
-  .logo{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:20px;letter-spacing:0.02em;}
-  .logo span{color:var(--lime);}
-  .nav-cta{
-    background:var(--lime);color:#0A0A0A;font-weight:700;font-size:13px;
-    padding:10px 20px;border-radius:4px;text-decoration:none;
-    font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;
-  }
-
-  /* ---------- hero ---------- */
-  .hero{padding:80px 0 60px;position:relative;overflow:hidden;}
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--lime);
-    border:1px solid rgba(200,255,0,0.3);background:rgba(200,255,0,0.06);
-    padding:6px 14px;border-radius:100px;margin-bottom:28px;letter-spacing:0.04em;
-  }
-  .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 8px var(--lime);}
-  h1{
-    font-size:clamp(40px,6.2vw,76px);
-    line-height:0.96;
-    margin-bottom:24px;
-    max-width:880px;
-  }
-  h1 .accent{color:var(--lime);}
-  .subhead{
-    font-size:19px;color:var(--text-dim);max-width:600px;margin-bottom:40px;line-height:1.6;
-  }
-  .hero-ctas{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:56px;}
-  .btn-primary{
-    background:var(--lime);color:#0A0A0A;font-weight:700;font-size:16px;
-    padding:18px 36px;border-radius:6px;text-decoration:none;display:inline-block;
-    transition:transform 0.15s ease;
-  }
-  .btn-primary:hover{transform:translateY(-2px);}
-  .price-tag{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--text-dim);}
-  .price-tag b{color:var(--text);font-size:18px;}
-
-  /* template count strip signature */
-  .count-strip{display:flex;gap:2px;margin-bottom:8px;flex-wrap:wrap;}
-  .count-block{
-    height:18px;width:14px;background:var(--bg-card-2);border-radius:1px;
-  }
-  .count-block.lit{background:var(--lime);}
-  .count-label{
-    display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;
-    font-size:11px;color:var(--text-dimmer);margin-bottom:48px;letter-spacing:0.03em;
-  }
-
-  /* ---------- problem ---------- */
-  .section{padding:72px 0;border-top:1px solid var(--line);}
-  .section-label{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);
-    letter-spacing:0.08em;margin-bottom:16px;text-transform:uppercase;
-  }
-  h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:20px;max-width:680px;line-height:1.05;}
-  .lead{font-size:17px;color:var(--text-dim);max-width:620px;margin-bottom:8px;}
-
-  .problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:40px;border-radius:8px;overflow:hidden;}
-  .problem-item{background:var(--bg);padding:28px 24px;}
-  .problem-item .num{font-family:'IBM Plex Mono',monospace;color:var(--text-dimmer);font-size:12px;margin-bottom:12px;}
-  .problem-item p{font-size:15px;color:var(--text-dim);line-height:1.55;}
-  .problem-item strong{color:var(--text);display:block;margin-bottom:6px;font-size:16px;}
-
-  /* ---------- template card grid signature ---------- */
-  .mechanism{padding:72px 0;border-top:1px solid var(--line);}
-  .card-grid{
-    display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:48px;
-  }
-  .tcard{
-    background:var(--bg-card);border:1px solid var(--line);border-radius:8px;padding:16px 14px;
-    aspect-ratio:1/1;display:flex;flex-direction:column;justify-content:space-between;
-  }
-  .tcard .tcard-cat{font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--lime);letter-spacing:0.04em;}
-  .tcard .tcard-lines{display:flex;flex-direction:column;gap:5px;margin-top:8px;}
-  .tcard .tcard-lines span{display:block;height:5px;background:var(--bg-card-2);border-radius:2px;}
-  .tcard .tcard-lines span:nth-child(2){width:70%;}
-  .tcard .tcard-lines span:nth-child(3){width:45%;}
-  .tcard .tcard-num{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--text-dimmer);text-align:right;}
-
-  .category-list{margin-top:56px;}
-  .cat-row{
-    display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line);
-  }
-  .cat-row:first-child{border-top:1px solid var(--line);}
-  .cat-row .cat-name{font-size:18px;font-weight:700;}
-  .cat-row .cat-desc{font-size:14px;color:var(--text-dim);max-width:420px;}
-  .cat-row .cat-count{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--blue);background:rgba(0,212,255,0.08);padding:6px 14px;border-radius:100px;white-space:nowrap;}
-
-  /* ---------- offer / value stack ---------- */
-  .offer{padding:80px 0;border-top:1px solid var(--line);background:var(--bg-card);}
-  .offer-box{
-    max-width:640px;margin:0 auto;background:var(--bg);border:1px solid var(--line);border-radius:14px;
-    padding:48px;
-  }
-  .offer-box h2{text-align:center;margin:0 auto 8px;font-size:30px;}
-  .offer-sub{text-align:center;color:var(--text-dim);font-size:15px;margin-bottom:36px;}
-  .stack-list{list-style:none;margin-bottom:32px;}
-  .stack-list li{
-    display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);
-  }
-  .stack-list li:last-child{border-bottom:none;}
-  .check{
-    width:20px;height:20px;border-radius:50%;background:rgba(200,255,0,0.12);color:var(--lime);
-    display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:2px;font-weight:700;
-  }
-  .stack-list span{font-size:15px;color:var(--text);}
-  .stack-list small{display:block;color:var(--text-dim);font-size:13px;margin-top:2px;}
-
-  .price-block{text-align:center;padding-top:8px;}
-  .price-old{font-family:'IBM Plex Mono',monospace;color:var(--text-dimmer);text-decoration:line-through;font-size:16px;}
-  .price-new{font-family:'Big Shoulders Display',sans-serif;font-weight:800;font-size:56px;color:var(--lime);line-height:1;margin:6px 0 4px;}
-  .price-installment{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--text-dim);margin-bottom:28px;}
-  .btn-offer{
-    display:block;width:100%;text-align:center;background:var(--lime);color:#0A0A0A;
-    font-weight:700;font-size:17px;padding:20px;border-radius:8px;text-decoration:none;margin-bottom:16px;
-  }
-  .guarantee{
-    display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:var(--text-dim);
-    font-family:'IBM Plex Mono',monospace;
-  }
-
-  /* ---------- cross-sell ---------- */
-  .cross-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px;
-  }
-  .cross-card{
-    background:var(--bg-card);border:1px solid var(--line);border-radius:12px;
-    padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;
-  }
-  .cross-card-tag{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blue);letter-spacing:0.06em;display:block;margin-bottom:8px;}
-  .cross-card-text h3{font-size:19px;margin-bottom:8px;font-weight:700;}
-  .cross-card-text p{font-size:14px;color:var(--text-dim);line-height:1.55;}
-  .cross-card-link{
-    background:transparent;border:1px solid var(--blue);color:var(--blue);font-family:'IBM Plex Mono',monospace;
-    font-size:13px;font-weight:600;padding:14px 20px;border-radius:6px;text-decoration:none;white-space:nowrap;
-    text-align:center;
-  }
-
-  /* ---------- faq ---------- */
-  .faq-item{border-bottom:1px solid var(--line);padding:24px 0;}
-  .faq-item summary{font-size:17px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
-  .faq-item summary::-webkit-details-marker{display:none;}
-  .faq-item summary::after{content:"+";font-family:'IBM Plex Mono',monospace;color:var(--blue);font-size:20px;}
-  .faq-item[open] summary::after{content:"−";}
-  .faq-item p{margin-top:14px;color:var(--text-dim);font-size:15px;line-height:1.6;max-width:680px;}
-
-  /* ---------- final cta ---------- */
-  .final-cta{padding:90px 0;text-align:center;border-top:1px solid var(--line);}
-  .final-cta h2{margin:0 auto 16px;max-width:600px;text-align:center;}
-  .final-cta .lead{margin:0 auto 36px;text-align:center;}
-
-  footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;}
-  footer p{font-size:13px;color:var(--text-dimmer);font-family:'IBM Plex Mono',monospace;}
-
-  @media (max-width:760px){
-    .problem-grid{grid-template-columns:1fr;}
-    .card-grid{grid-template-columns:repeat(3,1fr);}
-    .offer-box{padding:32px 24px;}
-    .cat-row{flex-direction:column;align-items:flex-start;gap:8px;}
-    .cross-grid{grid-template-columns:1fr;}
-  }
-  @media (max-width:520px){
-    .card-grid{grid-template-columns:repeat(2,1fr);}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>35 Templates de Copy de Alta Conversão | Operação 10X</title>
+  
+  <!-- Fontes Premium -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=IBM+Plex+Mono:wght@400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#0A0A0A',
+            brandLime: '#C8FF00',
+            brandBlue: '#00D4FF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Big Shoulders Display"', 'sans-serif'],
+            mono: ['"IBM Plex Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #0A0A0A;
+      color: #F3F4F6;
+    }
+    .text-glow-lime {
+      text-shadow: 0 0 15px rgba(200, 255, 0, 0.45);
+    }
+    .box-glow-lime {
+      box-shadow: 0 0 30px rgba(200, 255, 0, 0.08);
+    }
+  </style>
 </head>
-<body>
+<body class="font-sans antialiased overflow-x-hidden">
 
-<nav>
-  <div class="wrap">
-    <div class="logo">OPERAÇÃO <span>10X</span></div>
-    <a href="https://pay.kiwify.com.br/CsPn2zV" class="nav-cta">QUERO OS 35</a>
+  <!-- Header / Barra de Escassez -->
+  <div class="bg-black border-b border-[#1A1A1A] py-3 px-4 text-center">
+    <p class="font-mono text-xs text-brandLime uppercase tracking-widest font-bold">
+      ⚡ ACESSO IMEDIATO LIBERADO • COPIE AS ESTRUTURAS DE MAIOR TAXA DE CONVERSÃO DO MERCADO
+    </p>
   </div>
-</nav>
 
-<header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">35 MODELOS DE COPY PRONTOS</div>
-    <h1>Pare de escrever<br>do zero. Comece a<br><span class="accent">escrever que vende.</span></h1>
-    <p class="subhead">35 modelos prontos para adaptar ao seu produto e criar textos que vendem — com muito mais rapidez e confiança.</p>
+  <!-- Hero Section -->
+  <header class="relative pt-12 pb-16 md:pt-20 md:pb-24 px-6 border-b border-[#111]">
+    <!-- Background Accents -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(200,255,0,0.06),transparent_50%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,212,255,0.04),transparent_50%)] pointer-events-none"></div>
+    
+    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+      <span class="inline-block font-mono text-xs tracking-[0.25em] text-brandLime uppercase font-bold bg-brandLime/10 px-4 py-2 rounded-full border border-brandLime/20">
+        ⚡ ARSENAL DE COPYWRITING PROFISSIONAL
+      </span>
+      
+      <h1 class="text-5xl sm:text-7xl md:text-8xl font-display font-black uppercase leading-none tracking-tight text-white">
+        35 TEMPLATES DE COPY QUE <span class="text-brandLime text-glow-lime">CONVERTEM VISITANTES EM CLIENTES</span>
+      </h1>
+      
+      <p class="text-base sm:text-lg md:text-xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+        Modelos prontos e adaptáveis inspirados nos maiores nomes de marketing e copywriting do mundo. Apenas preencha as lacunas do seu negócio e comece a vender.
+      </p>
 
-    <div class="count-strip" aria-hidden="true">
-      <div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div>
-      <div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div>
-      <div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div>
-      <div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div>
-      <div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div>
-      <div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div>
-      <div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div><div class="count-block lit"></div>
-    </div>
-    <div class="count-label">
-      <span>35 MODELOS · FÓRMULA + EXEMPLO PREENCHIDO</span>
-      <span>PRONTOS PARA USAR</span>
-    </div>
-
-    <div class="hero-ctas">
-      <a href="https://pay.kiwify.com.br/CsPn2zV" class="btn-primary">Quero os 35 modelos →</a>
-      <span class="price-tag">a partir de <b>R$ 47</b> · acesso imediato</span>
-    </div>
-  </div>
-</header>
-
-<section class="section">
-  <div class="wrap">
-    <div class="section-label">O PROBLEMA</div>
-    <h2>A página em branco custa caro — em tempo e em vendas perdidas.</h2>
-    <p class="lead">Cada hora gasta tentando escrever do zero é uma hora a menos vendendo. E texto fraco converte pior, mesmo com um produto bom por trás.</p>
-
-    <div class="problem-grid">
-      <div class="problem-item">
-        <div class="num">01</div>
-        <strong>Horas travado na escrita</strong>
-        <p>Tenta começar um anúncio ou página e fica girando em torno da primeira frase.</p>
-      </div>
-      <div class="problem-item">
-        <div class="num">02</div>
-        <strong>Texto sem estrutura</strong>
-        <p>Escreve sem uma fórmula por trás, então o texto não guia o leitor até a decisão de compra.</p>
-      </div>
-      <div class="problem-item">
-        <div class="num">03</div>
-        <strong>Insegurança na hora de publicar</strong>
-        <p>Não sabe se o texto está bom o suficiente — e isso atrasa a publicação.</p>
+      <div class="pt-6">
+        <a href="#checkout-section" class="inline-block px-8 py-5 bg-brandLime hover:bg-lime-400 text-black font-display font-black text-xl md:text-2xl tracking-wider uppercase italic transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(200,255,0,0.25)] hover:shadow-[0_0_40px_rgba(200,255,0,0.45)]">
+          QUERO COPIAR OS 35 TEMPLATES
+        </a>
+        <div class="mt-4 flex items-center justify-center gap-4 text-xs font-mono text-gray-500">
+          <span>✓ Headlines</span>
+          <span>•</span>
+          <span>✓ WhatsApp</span>
+          <span>•</span>
+          <span>✓ E-mails de Vendas</span>
+          <span>•</span>
+          <span>✓ Stories</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="mechanism">
-  <div class="wrap">
-    <div class="section-label">O QUE VOCÊ RECEBE</div>
-    <h2>35 fichas prontas. Fórmula + exemplo preenchido em cada uma.</h2>
-    <p class="lead">Você não parte de uma folha em branco — parte de um modelo testado, só adapta ao seu produto.</p>
-
-    <div class="card-grid" aria-hidden="true">
-      <div class="tcard"><span class="tcard-cat">HEADLINE</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">01</span></div>
-      <div class="tcard"><span class="tcard-cat">PÁGINA</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">02</span></div>
-      <div class="tcard"><span class="tcard-cat">ANÚNCIO</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">03</span></div>
-      <div class="tcard"><span class="tcard-cat">DESCRIÇÃO</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">04</span></div>
-      <div class="tcard"><span class="tcard-cat">CTA</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">05</span></div>
-      <div class="tcard"><span class="tcard-cat">HEADLINE</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">06</span></div>
-      <div class="tcard"><span class="tcard-cat">PÁGINA</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">07</span></div>
-      <div class="tcard"><span class="tcard-cat">ANÚNCIO</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">08</span></div>
-      <div class="tcard"><span class="tcard-cat">DESCRIÇÃO</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">09</span></div>
-      <div class="tcard"><span class="tcard-cat">CTA</span><div class="tcard-lines"><span></span><span></span><span></span></div><span class="tcard-num">10</span></div>
+  <!-- Preview of templates -->
+  <section class="py-16 md:py-24 px-6 max-w-4xl mx-auto space-y-8">
+    <div class="text-center space-y-2">
+      <span class="font-mono text-xs text-brandBlue uppercase tracking-widest font-bold">PRONTO PARA USAR</span>
+      <h2 class="text-3xl md:text-5xl font-display font-black uppercase text-white tracking-wide">
+        VEJA UMA AMOSTRA DO ARSENAL
+      </h2>
     </div>
 
-    <div class="category-list">
-      <div class="cat-row">
+    <div class="bg-[#0E0E0E] border border-[#1A1A1A] rounded-2xl p-6 relative overflow-hidden space-y-4">
+      <div class="p-4 bg-black rounded-xl border border-[#151515] flex flex-col md:flex-row md:items-center justify-between gap-3">
         <div>
-          <div class="cat-name">Headlines</div>
-          <div class="cat-desc">Modelos para capturar atenção nos primeiros segundos.</div>
+          <span class="text-[10px] font-mono text-brandLime uppercase font-bold">Template 04: Headline de Curiosidade Extrema</span>
+          <p class="text-sm text-gray-300 mt-1">"Como [Ação Desejada] em [Tempo Curto] sem precisar passar por [Grande Objeção]..."</p>
         </div>
-        <div class="cat-count">7 modelos</div>
+        <span class="text-xs text-gray-500 font-mono bg-[#111] px-2.5 py-1 rounded">HEADLINE</span>
       </div>
-      <div class="cat-row">
+
+      <div class="p-4 bg-black rounded-xl border border-[#151515] flex flex-col md:flex-row md:items-center justify-between gap-3">
         <div>
-          <div class="cat-name">Páginas de vendas</div>
-          <div class="cat-desc">Estruturas completas, da abertura ao fechamento.</div>
+          <span class="text-[10px] font-mono text-brandLime uppercase font-bold">Template 17: Abordagem Pronta WhatsApp</span>
+          <p class="text-sm text-gray-300 mt-1">"Fala [Nome], acabei de liberar uma condição única para quem quer resolver [Problema] ainda..."</p>
         </div>
-        <div class="cat-count">7 modelos</div>
+        <span class="text-xs text-gray-500 font-mono bg-[#111] px-2.5 py-1 rounded">WHATSAPP</span>
       </div>
-      <div class="cat-row">
+
+      <div class="p-4 bg-black rounded-xl border border-[#151515] flex flex-col md:flex-row md:items-center justify-between gap-3">
         <div>
-          <div class="cat-name">Anúncios para Meta Ads</div>
-          <div class="cat-desc">Textos prontos para campanhas no Instagram e Facebook.</div>
+          <span class="text-[10px] font-mono text-brandLime uppercase font-bold">Template 29: Script Roteirizado para Stories</span>
+          <p class="text-sm text-gray-300 mt-1">"Eu costumava cometer o exato erro de achar que [Grande Mentira] até que decidi..."</p>
         </div>
-        <div class="cat-count">7 modelos</div>
-      </div>
-      <div class="cat-row">
-        <div>
-          <div class="cat-name">Descrições de produto</div>
-          <div class="cat-desc">Para páginas de checkout e fichas de produto.</div>
-        </div>
-        <div class="cat-count">7 modelos</div>
-      </div>
-      <div class="cat-row">
-        <div>
-          <div class="cat-name">Chamadas para ação</div>
-          <div class="cat-desc">Frases de CTA testadas para aumentar cliques.</div>
-        </div>
-        <div class="cat-count">7 modelos</div>
+        <span class="text-xs text-gray-500 font-mono bg-[#111] px-2.5 py-1 rounded">STORIES/VÍDEO</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="offer">
-  <div class="wrap">
-    <div class="offer-box">
-      <h2>O que você recebe</h2>
-      <p class="offer-sub">35 Templates de Copy — Operação 10X</p>
+  <!-- O Conteúdo / O que você leva -->
+  <section class="bg-[#0E0E0E] py-16 md:py-24 px-6 border-y border-[#151515]">
+    <div class="max-w-4xl mx-auto space-y-12">
+      <div class="text-center space-y-2">
+        <span class="font-mono text-xs text-brandLime uppercase tracking-widest font-bold">O ARSENAL COMPLETO</span>
+        <h2 class="text-4xl md:text-5xl font-display font-black uppercase text-white tracking-wide">
+          O QUE ESTÁ INCLUSO NO ARQUIVO DIGITAL:
+        </h2>
+      </div>
 
-      <ul class="stack-list">
-        <li>
-          <span class="check">✓</span>
-          <span>35 modelos prontos de copy<small>Headlines, páginas, anúncios, descrições e CTAs</small></span>
-        </li>
-        <li>
-          <span class="check">✓</span>
-          <span>Fórmula explicada em cada modelo<small>Entenda a lógica por trás, não só copie</small></span>
-        </li>
-        <li>
-          <span class="check">✓</span>
-          <span>Exemplo já preenchido em cada um<small>Veja o modelo aplicado antes de adaptar ao seu produto</small></span>
-        </li>
-        <li>
-          <span class="check">✓</span>
-          <span>Acesso imediato após a compra<small>Material em PDF, comece a usar agora</small></span>
-        </li>
-      </ul>
+      <div class="grid sm:grid-cols-2 gap-6">
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandLime font-bold">01 • 10 TEMPLATES DE HEADLINES MATADORAS</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Estruturas linguísticas exatas para o topo da sua página de vendas para capturar instantaneamente a atenção de quem entra.
+          </p>
+        </div>
 
-      <div class="price-block">
-        <div class="price-old mono">de R$ 97</div>
-        <div class="price-new">R$ 47</div>
-        <div class="price-installment">ou em até 12x no cartão</div>
-        <a href="https://pay.kiwify.com.br/CsPn2zV" class="btn-offer">Quero os 35 modelos agora →</a>
-        <div class="guarantee">🔒 Garantia incondicional de 7 dias</div>
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandLime font-bold">02 • 10 SCRIPTS DE DISPARO DE WHATSAPP</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Para recuperar boletos pendentes, carrinhos abandonados, fazer abordagens frias ou ativar listas antigas de clientes.
+          </p>
+        </div>
+
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandLime font-bold">03 • 10 ROTEIROS DE SEQUÊNCIA DE STORIES</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Ordens e ganchos lógicos exatos para postar durante o dia gerando desejo e abrindo vendas de forma totalmente orgânica.
+          </p>
+        </div>
+
+        <div class="bg-black p-6 rounded-xl border border-[#1A1A1A] space-y-3">
+          <span class="font-mono text-sm text-brandLime font-bold">04 • 5 E-MAILS DE CAMPANHA DE ESCASSEZ</span>
+          <p class="text-xs text-gray-400 leading-relaxed">
+            Sequência automática estruturada para gerar urgência real e fazer as pessoas clicarem freneticamente no seu link de compra.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-label">DE ONDE VEM O PRODUTO QUE VOCÊ VAI VENDER?</div>
-    <h2>Os modelos escrevem a venda. Estes dois cuidam do resto.</h2>
-    <p class="lead">Os 35 modelos servem para qualquer fase — mas funcionam ainda melhor combinados com estes dois.</p>
-
-    <div class="cross-grid">
-      <div class="cross-card">
-        <div class="cross-card-text">
-          <span class="cross-card-tag">SE AINDA NÃO TEM PRODUTO</span>
-          <h3>Crie seu Primeiro Produto Digital em 24 Horas</h3>
-          <p>Valide, crie e publique seu produto digital em até 24h — depois é só usar os modelos para vender.</p>
-        </div>
-        <a href="https://digierammd.github.io/operacao-10x-os/produto-24h/" class="cross-card-link">Ver o framework de 24h →</a>
+  <!-- Checkout & Garantia Block -->
+  <section id="checkout-section" class="py-16 md:py-24 px-6 max-w-3xl mx-auto text-center space-y-10">
+    <div class="space-y-4">
+      <span class="font-mono text-xs text-gray-500 uppercase tracking-widest">OFERTA ÚNICA SEM ASSINATURA</span>
+      <div class="flex items-baseline justify-center gap-3">
+        <span class="text-lg font-mono text-gray-600 line-through">R$ 197</span>
+        <span class="text-6xl md:text-7xl font-display font-black text-white text-glow-lime">R$ 47</span>
       </div>
-      <div class="cross-card">
-        <div class="cross-card-text">
-          <span class="cross-card-tag">SE JÁ TEM PRODUTO</span>
-          <h3>Lance seu Produto Digital em Apenas 7 Dias</h3>
-          <p>O cronograma completo de lançamento, com os modelos certos para cada um dos 7 dias.</p>
+      <p class="text-xs sm:text-sm text-gray-400 max-w-md mx-auto">
+        Chega de travar olhando para uma folha em branco na hora de escrever. Acesse agora mesmo todos os templates para alavancar seu ROI.
+      </p>
+    </div>
+
+    <!-- Botão Principal de Checkout -->
+    <div class="space-y-4">
+      <a href="https://pay.kiwify.com.br/xxxxx" target="_blank" class="block w-full py-5 bg-brandLime hover:bg-lime-400 text-black font-display font-black text-2xl tracking-wider uppercase italic transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(200,255,0,0.3)]">
+        COMPRAR AGORA • ACESSO IMEDIATO
+      </a>
+      <p class="text-[10px] font-mono text-gray-500 uppercase">✓ Você será redirecionado para a plataforma de pagamento seguro da Kiwify</p>
+    </div>
+
+    <!-- Garantia e Segurança -->
+    <div class="grid sm:grid-cols-2 gap-4 pt-6 border-t border-[#111] text-left font-mono text-[10px] text-gray-500">
+      <div class="flex gap-3 items-start bg-[#0E0E0E] p-4 rounded-lg border border-[#151515]">
+        <span class="text-brandLime font-bold text-base">🛡</span>
+        <div>
+          <p class="font-bold text-white uppercase">GARANTIA INCONDICIONAL DE 7 DIAS</p>
+          <p class="mt-0.5 leading-relaxed">Se por algum motivo você achar que não é para você, basta solicitar o reembolso em até 7 dias e devolvemos cada centavo.</p>
         </div>
-        <a href="https://digierammd.github.io/operacao-10x-os/kit-7-dias/" class="cross-card-link">Ver o kit de lançamento →</a>
+      </div>
+      <div class="flex gap-3 items-start bg-[#0E0E0E] p-4 rounded-lg border border-[#151515]">
+        <span class="text-brandBlue font-bold text-base">🔒</span>
+        <div>
+          <p class="font-bold text-white uppercase">SISTEMA 100% CRIPTOGRAFADO</p>
+          <p class="mt-0.5 leading-relaxed">Sua compra é processada com a segurança máxima de criptografia SSL da Kiwify, garantindo sigilo absoluto dos seus dados.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section">
-  <div class="wrap">
-    <div class="section-label">PERGUNTAS FREQUENTES</div>
-    <h2 style="margin-bottom:36px;">Antes de decidir</h2>
-
-    <details class="faq-item" open>
-      <summary>Preciso saber escrever copy para usar?</summary>
-      <p>Não. Cada modelo vem com a fórmula explicada e um exemplo preenchido — você adapta trocando as informações do seu produto.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Funciona para qualquer nicho?</summary>
-      <p>Sim. Os modelos são estruturas adaptáveis, não textos fechados — funcionam para qualquer produto digital ou serviço.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Serve para Instagram e Facebook Ads?</summary>
-      <p>Sim, inclui modelos específicos para anúncios em Meta Ads, além de headlines, páginas e descrições.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Como recebo o material?</summary>
-      <p>Acesso liberado imediatamente após a confirmação do pagamento, direto na plataforma Kiwify.</p>
-    </details>
-    <details class="faq-item">
-      <summary>E se não funcionar para mim?</summary>
-      <p>Garantia incondicional de 7 dias. Se não fizer sentido pra você, devolução total, sem perguntas.</p>
-    </details>
-  </div>
-</section>
-
-<section class="final-cta">
-  <div class="wrap">
-    <div class="section-label" style="text-align:center;">ÚLTIMA CHAMADA</div>
-    <h2>35 modelos prontos. O texto que falta no seu próximo lançamento.</h2>
-    <p class="lead">Pare de escrever do zero — comece a partir do que já funciona.</p>
-    <a href="https://pay.kiwify.com.br/CsPn2zV" class="btn-primary">Quero os 35 modelos →</a>
-  </div>
-</section>
-
-<footer>
-  <p>OPERAÇÃO 10X © 2026 · PRODUTO DIGITAL · GARANTIA DE 7 DIAS</p>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-black py-8 px-6 text-center text-xs text-gray-600 border-t border-[#111] font-mono">
+    <p>© 2026 Operação 10X. Todos os direitos reservados.</p>
+    <p class="mt-1 text-[10px] text-gray-700">Este site não faz parte do Facebook, Google ou Kiwify. Os resultados variam de acordo com cada aplicador.</p>
+  </footer>
 
 </body>
 </html>
