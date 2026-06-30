@@ -63,10 +63,11 @@
 <body class="font-sans antialiased overflow-x-hidden pb-16 md:pb-0">
 
   <!-- Header / Barra de Escassez -->
-  <div class="bg-black border-b border-[#1A1A1A] py-3 px-4 text-center">
+  <div class="bg-black border-b border-[#1A1A1A] py-3 px-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
     <p class="font-mono text-xs text-brandLime uppercase tracking-widest font-bold">
       ⚡ ACESSO IMEDIATO LIBERADO • O COFRE COMPLETO DE PROMPTS, TEMPLATES E CRONOGRAMAS DA OPERAÇÃO 10X
     </p>
+    <a href="#produtos" class="font-mono text-[10px] text-gray-400 hover:text-brandBlue uppercase tracking-widest underline underline-offset-2">Ver produtos avulsos ↓</a>
   </div>
 
   <!-- Hero Section -->
@@ -102,6 +103,87 @@
       </div>
     </div>
   </header>
+
+  <!-- Produtos Avulsos -->
+  <section id="produtos" class="py-16 md:py-24 px-6 max-w-6xl mx-auto space-y-12">
+    <div class="text-center space-y-2">
+      <span class="font-mono text-xs text-brandBlue uppercase tracking-widest font-bold">COMPRE SEPARADO OU LEVE TUDO</span>
+      <h2 class="text-4xl md:text-6xl font-display font-black uppercase text-white tracking-wide">
+        ESCOLHA SEU <span class="text-brandLime text-glow-lime">PRODUTO</span>
+      </h2>
+      <p class="text-sm text-gray-400 max-w-xl mx-auto pt-2">
+        Cada guia resolve uma etapa específica. Ou pule a fila e leve o Vault 10X completo com 34% de desconto.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- Produto: Framework 24h -->
+      <a href="./produto-digital-24h/" class="group block bg-[#0E0E0E] p-6 rounded-2xl border border-[#1A1A1A] hover:border-brandLime/40 transition-all flex flex-col justify-between space-y-6">
+        <div class="space-y-3">
+          <span class="font-mono text-[10px] text-brandLime font-bold uppercase tracking-widest bg-brandLime/5 border border-brandLime/10 px-2.5 py-1 rounded inline-block">VALIDAÇÃO + CRIAÇÃO</span>
+          <h3 class="font-display text-xl font-black text-white uppercase leading-tight pt-1">FRAMEWORK PRODUTO EM 24H</h3>
+          <p class="text-xs text-gray-400 leading-relaxed font-sans">
+            Valide, crie e publique seu primeiro infoproduto em 24 horas usando IA gratuita.
+          </p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-[#1A1A1A]">
+          <span class="text-2xl font-display font-black text-white">R$ 47</span>
+          <span class="font-mono text-[10px] text-brandLime uppercase font-bold group-hover:translate-x-1 transition-transform">Ver guia →</span>
+        </div>
+      </a>
+
+      <!-- Produto: Kit 7 dias -->
+      <a href="./kit-7-dias/" class="group block bg-[#0E0E0E] p-6 rounded-2xl border border-[#1A1A1A] hover:border-brandBlue/40 transition-all flex flex-col justify-between space-y-6">
+        <div class="space-y-3">
+          <span class="font-mono text-[10px] text-brandBlue font-bold uppercase tracking-widest bg-brandBlue/5 border border-brandBlue/10 px-2.5 py-1 rounded inline-block">LANÇAMENTO ORGÂNICO</span>
+          <h3 class="font-display text-xl font-black text-white uppercase leading-tight pt-1">KIT LANÇAMENTO 7 DIAS</h3>
+          <p class="text-xs text-gray-400 leading-relaxed font-sans">
+            Cronograma diário com scripts prontos para vender sem tráfego pago em uma semana.
+          </p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-[#1A1A1A]">
+          <span class="text-2xl font-display font-black text-white">R$ 47</span>
+          <span class="font-mono text-[10px] text-brandBlue uppercase font-bold group-hover:translate-x-1 transition-transform">Ver guia →</span>
+        </div>
+      </a>
+
+      <!-- Produto: 35 Templates -->
+      <a href="./35-templates/" class="group block bg-[#0E0E0E] p-6 rounded-2xl border border-[#1A1A1A] hover:border-brandLime/40 transition-all flex flex-col justify-between space-y-6">
+        <div class="space-y-3">
+          <span class="font-mono text-[10px] text-brandLime font-bold uppercase tracking-widest bg-brandLime/5 border border-brandLime/10 px-2.5 py-1 rounded inline-block">COPY PRONTA</span>
+          <h3 class="font-display text-xl font-black text-white uppercase leading-tight pt-1">35 TEMPLATES DE COPY</h3>
+          <p class="text-xs text-gray-400 leading-relaxed font-sans">
+            Headlines, scripts de WhatsApp, stories e e-mails de vendas prontos para copiar e colar.
+          </p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-[#1A1A1A]">
+          <span class="text-2xl font-display font-black text-white">R$ 47</span>
+          <span class="font-mono text-[10px] text-brandLime uppercase font-bold group-hover:translate-x-1 transition-transform">Ver guia →</span>
+        </div>
+      </a>
+
+      <!-- Produto: Vault 10X (bundle, página atual) -->
+      <a href="#checkout-section" class="group block bg-black p-6 rounded-2xl border-2 border-brandLime/50 hover:border-brandLime transition-all flex flex-col justify-between space-y-6 box-glow-lime relative overflow-hidden">
+        <span class="absolute top-0 right-0 bg-brandLime text-black text-[9px] font-mono font-black uppercase px-3 py-1 tracking-widest">-34%</span>
+        <div class="space-y-3">
+          <span class="font-mono text-[10px] text-black font-bold uppercase tracking-widest bg-brandLime px-2.5 py-1 rounded inline-block">PACOTE COMPLETO</span>
+          <h3 class="font-display text-xl font-black text-white uppercase leading-tight pt-1">VAULT 10X <span class="text-brandLime">(BUNDLE)</span></h3>
+          <p class="text-xs text-gray-300 leading-relaxed font-sans">
+            Os 3 guias acima em sequência lógica, do zero ao produto publicado e divulgado.
+          </p>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-brandLime/20">
+          <div>
+            <span class="text-xs font-mono text-gray-500 line-through mr-1">R$ 148</span>
+            <span class="text-2xl font-display font-black text-brandLime">R$ 97</span>
+          </div>
+          <span class="font-mono text-[10px] text-brandLime uppercase font-bold group-hover:translate-x-1 transition-transform">Garantir →</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
 
   <!-- Problem Section -->
   <section class="py-16 md:py-24 px-6 max-w-5xl mx-auto">
